@@ -33,11 +33,14 @@ app {
     .main .top-row {
         background-color: brown;
         border-bottom: 1px solid #d6d5d5;
-        justify-content: flex-end;
+        /*justify-content: flex-end;*/
     }
 
         .main .top-row .make-dark {
-            background-color: rgba(0,0,0,0.4); 
+            background-color: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100%;
+            padding: 14Px;
         }
 
         .main .top-row > a, .main .top-row .btn-link {
@@ -172,7 +175,7 @@ app {
         top: 0;
     }
 
-    .main > div {
+    .main .content {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
