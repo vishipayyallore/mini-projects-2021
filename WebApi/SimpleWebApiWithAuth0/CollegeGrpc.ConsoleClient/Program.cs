@@ -2,6 +2,8 @@
 using Grpc.Net.Client;
 using GrpcServiceWithAuth0.ClientCredentialsDemo;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using RestSharp;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -34,23 +36,44 @@ namespace CollegeGrpc.ConsoleClient
 
         static async Task Main(string[] args)
         {
+            var externalFilePath = @"C:\Users\secrets.json";
+
             _config = new ConfigurationBuilder()
                             .SetBasePath(Directory.GetCurrentDirectory())
-                            .AddJsonFile("appsettings.json").Build();
+                            .AddJsonFile("appsettings.json")
+                            .AddJsonFile(externalFilePath)
+                            .Build();
 
-            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+            var jwtToken = GetTokenFromAuth0();
 
             var headers = new Metadata();
-            var token = "YourToken";
-            headers.Add("Authorization", $"Bearer {token}");
+            headers.Add("Authorization", $"Bearer {jwtToken.Access_Token}");
 
             var reply = await Client.SayHelloAsync(new HelloRequest { Name = "GreeterClient" }, headers: headers);
-            Console.WriteLine("Greeting: " + reply.Message);
+            WriteLine("Greeting: " + reply.Message);
 
-            Console.WriteLine("\n\nThank You for using the application. \n\nPress any key ...");
-            Console.ReadKey();
+            WriteLine("\n\nThank You for using the application. \n\nPress any key ...");
+            ReadKey();
         }
 
+        private static JwtAccessToken GetTokenFromAuth0()
+        {
+            var client = new RestClient("https://vishipayyallore.us.auth0.com");
+            var request = new RestRequest("/oauth/token", Method.POST);
+            request.AddHeader("content-type", "application/x-www-form-urlencoded");
+
+            request.AddParameter("client_id", _config["Auth0Credentials:client_id"], ParameterType.GetOrPost);
+            request.AddParameter("client_secret", _config["Auth0Credentials:client_secret"], ParameterType.GetOrPost);
+            request.AddParameter("grant_type", _config["Auth0Credentials:grant_type"], ParameterType.GetOrPost);
+            request.AddParameter("audience", _config["Auth0Credentials:Audience"], ParameterType.GetOrPost);
+
+            var response = client.Execute(request);
+            var jsonToken = JsonConvert.DeserializeObject<JwtAccessToken>(response.Content);
+            jsonToken.Expiration = DateTime.Now.AddSeconds(jsonToken.Expires_In);
+
+            return jsonToken;
+        }
 
     }
+
 }
