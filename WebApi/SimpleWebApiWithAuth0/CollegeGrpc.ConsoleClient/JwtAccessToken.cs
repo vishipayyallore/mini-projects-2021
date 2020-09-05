@@ -11,7 +11,7 @@ namespace CollegeGrpc.ConsoleClient
 
         public string Token_Type { get; set; }
 
-        public DateTime Expiration { get; set; }
+        public DateTime Expiration { get; set; } = DateTime.Now;
     }
 
 }

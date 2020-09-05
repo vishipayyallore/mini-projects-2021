@@ -44,10 +44,16 @@ namespace CollegeGrpc.ConsoleClient
                             .AddJsonFile(externalFilePath)
                             .Build();
 
-            var jwtToken = GetTokenFromAuth0();
+            var jwtToken = new JwtAccessToken();
+            if(jwtToken.Expiration < DateTime.Now)
+            {
+                jwtToken = GetTokenFromAuth0();
+            }
 
-            var headers = new Metadata();
-            headers.Add("Authorization", $"Bearer {jwtToken.Access_Token}");
+            var headers = new Metadata
+            {
+                { "Authorization", $"Bearer {jwtToken.Access_Token}" }
+            };
 
             var reply = await Client.SayHelloAsync(new HelloRequest { Name = "GreeterClient" }, headers: headers);
             WriteLine("Greeting: " + reply.Message);
