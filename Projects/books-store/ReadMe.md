@@ -1,6 +1,6 @@
 # This mini-project is made using MEAN stack
 
-![Web API Output|150x150,20%](/Documentation/Images/NodeJS-WebAPI.PNG)
+![Web API Output|150x150](./Documentation/Images/NodeJS-WebAPI.PNG)
 
 ## Technologies Used
 
