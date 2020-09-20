@@ -13,6 +13,16 @@ const webApi = express();
 // Logger Middleware
 webApi.use(morganLogger);
 
+// Allowing CORS
+webApi.use(function (_, response, next) {
+    
+    response.header("Access-Control-Allow-Origin", "*");
+    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    response.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+
+    next();
+});
+
 // express middleware to handle the json body request
 webApi.use(express.json());
 
