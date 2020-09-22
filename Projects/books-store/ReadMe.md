@@ -5,6 +5,10 @@
 ### Angular 10 UI
 
 ![Web APP Dashboard|150x150](./Documentation/Images/Angular-WebAPP.PNG)'
+![Web APP Dashboard|150x150](./Documentation/Images/Add-Book.PNG)'
+![Web APP Dashboard|150x150](./Documentation/Images/BooksList.PNG)'
+![Web APP Dashboard|150x150](./Documentation/Images/Edit-Book.PNG)'
+![Web APP Dashboard|150x150](./Documentation/Images/Delete-Book.PNG)'
 
 ### Web API
 
