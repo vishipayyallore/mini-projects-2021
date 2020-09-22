@@ -4,41 +4,38 @@
   </div>
   <div class="card-body">
     <!-- Form -->
-    <div class="col-md-8 mb-4" *ngIf="bookstore">
-      <form [formGroup]="bookstoreForm" (ngSubmit)="onBookEdit(bookstore._id, bookstoreForm.value)"
-        novalidate>
+    <div class="col-md-8 mb-4" *ngIf="editBookDto">
+      <form [formGroup]="editBookForm" (ngSubmit)="onBookEdit(editBookDto._id, editBookForm.value)" novalidate>
 
         <div class="form-group divflex labelAndTextbox">
           <label class="element col-md-2">Id: </label>
-          <input type="text" formControlName="_id" class="form-control element ml-4"
-            [(ngModel)]="bookstore._id" readonly>
+          <input type="text" formControlName="id" class="form-control element ml-4" [(ngModel)]="editBookDto._id"
+            readonly>
         </div>
 
         <div class="form-group divflex labelAndTextbox">
           <label class="element col-md-2">Title: </label>
-          <input type="text" formControlName="title" class="form-control element ml-4" [(ngModel)]="bookstore.title"
-            maxlength="50">
+          <input type="text" formControlName="title" class="form-control element ml-4" [(ngModel)]="editBookDto.title"
+            maxlength="100">
         </div>
 
         <div class="form-group divflex labelAndTextbox">
           <label class="element col-md-2">Author: </label>
-          <input type="text" formControlName="author" class="form-control element ml-4" [(ngModel)]="bookstore.author"
-            maxlength="50" >
+          <input type="text" formControlName="author" class="form-control element ml-4" [(ngModel)]="editBookDto.author"
+            maxlength="100">
         </div>
 
         <div class="form-group divflex labelAndTextbox">
           <label class="element col-md-2">Published: </label>
-          <input type="text" formControlName="dateOfPublish" class="form-control element ml-4" [(ngModel)]="bookstore.dateOfPublish"
-            maxlength="50" readonly>
+          <input type="text" formControlName="dateOfPublish" class="form-control element ml-4"
+            [(ngModel)]="editBookDto.dateOfPublish" maxlength="50" readonly>
         </div>
 
         <div class="form-group divflex labelAndTextbox">
           <label class="element col-md-2">Language : </label>
-          <input type="text" formControlName="language" class="form-control element ml-4" [(ngModel)]="bookstore.language"
-            maxlength="50">
+          <input type="text" formControlName="language" class="form-control element ml-4"
+            [(ngModel)]="editBookDto.language" maxlength="100">
         </div>
-
-
 
         <button type="submit" class="btn btn-primary">
           <i class="fa fa-floppy-o" aria-hidden="true"></i> Save Book</button>

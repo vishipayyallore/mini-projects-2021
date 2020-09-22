@@ -14,18 +14,18 @@ import { IBookDto } from '../../interfaces/book.Dto';
 })
 export class EditBookComponent implements OnInit {
 
-  bookstore: IBookDto;
-  bookstoreForm: FormGroup;
+  editBookDto: IBookDto;
+  editBookForm: FormGroup;
 
   constructor(private route: ActivatedRoute, private bookstoreService: BooksService,
     private ngZone: NgZone, private router: Router, private formBuilder: FormBuilder) {
 
-    this.bookstoreForm = this.formBuilder.group({
+    this.editBookForm = this.formBuilder.group({
       dateOfPublish: '',
       language: '',
       author: '',
       title: '',
-      _id: ''
+      id: ''
     });
   }
 
@@ -34,10 +34,10 @@ export class EditBookComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
 
       this.bookstoreService.GetBookById(params.get('bookId'))
-        .subscribe((bookstore: IBookDto) => {
+        .subscribe((editBookDto: IBookDto) => {
 
-          this.bookstore = bookstore;
-          console.log(`${this.bookstore.title}`);
+          this.editBookDto = editBookDto;
+          console.log(`${this.editBookDto.title}`);
         });
     });
   }

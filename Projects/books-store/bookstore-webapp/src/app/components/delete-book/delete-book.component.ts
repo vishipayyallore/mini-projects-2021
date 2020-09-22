@@ -12,18 +12,18 @@ import { IBookDto } from '../../interfaces/book.Dto';
 })
 export class DeleteBookComponent implements OnInit {
 
-  bookstore: IBookDto;
-  bookstoreForm: FormGroup;
+  deleteBookDto: IBookDto;
+  deleteBookForm: FormGroup;
 
   constructor(private route: ActivatedRoute, private bookstoreService: BooksService,
     private ngZone: NgZone, private router: Router, private formBuilder: FormBuilder) {
 
-    this.bookstoreForm = this.formBuilder.group({
+    this.deleteBookForm = this.formBuilder.group({
       dateOfPublish: '',
       language: '',
       author: '',
       title: '',
-      _id: ''
+      id: ''
     });
   }
 
@@ -32,10 +32,10 @@ export class DeleteBookComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
 
       this.bookstoreService.GetBookById(params.get('bookId'))
-        .subscribe((bookstore: IBookDto) => {
+        .subscribe((deleteBookDto: IBookDto) => {
 
-          this.bookstore = bookstore;
-          console.log(`${this.bookstore.title}`);
+          this.deleteBookDto = deleteBookDto;
+          console.log(`${this.deleteBookDto.title}`);
         });
     });
   }
