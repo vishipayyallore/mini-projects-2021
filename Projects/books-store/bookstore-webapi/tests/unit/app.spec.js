@@ -22,7 +22,7 @@ describe('Testing /src/app.js', () => {
             const defaultMessage = 'Welcome to Books Web API.';
 
             test('API Should return default response', async function (done) {
-                const response = await apiServer.get('/');
+                const response = await apiServer.get('/api');
 
                 expect(response.status).toBe(200);
                 expect(JSON.parse(response.text)).toBe(defaultMessage);
