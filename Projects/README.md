@@ -1,6 +1,6 @@
 # Sample Mini Projects
 
-## 1. Output of gRPC Server and Client in .Net Core, Node JS, Python
+## 1. [books-store MEAN stack Application](https://github.com/vishipayyallore/mini-projects-2020/tree/master/Projects/books-store)
 
 ### 1.1. Angular 10 UI
 
@@ -16,7 +16,7 @@
 
 *********************************************************************************************************************************************************************
 
-## 2. Simple gRPC Server and Client in .Net Core, Node JS, Python, GoLang
+## 2. [Simple gRPC Server and Client in .Net Core, Node JS, Python, GoLang](https://github.com/vishipayyallore/mini-projects-2020/tree/master/Projects/grpc-helloworld)
 
 ### 2.1. gRPC Server and Client in **.Net Core C#**
 

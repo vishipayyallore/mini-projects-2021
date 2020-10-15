@@ -1,19 +1,35 @@
-# This Repository will contain Mini Projects (.Net Core, Node JS, Angular 10).
+# Sample Mini Projects
 
-## Mini Projects
+## 1. [books-store MEAN stack Application](https://github.com/vishipayyallore/mini-projects-2020/tree/master/Projects/books-store)
 
-## 1. Books Store
+### 1.1. Angular 10 UI
 
-### UI Look and Feel
-![Web APP Dashboard|150x150](./Projects/books-store/Documentation/Images/BooksList.PNG)'
-![Web APP Dashboard|150x150](./Projects/books-store/Documentation/Images/Edit-Book.PNG)'
+![Web APP Dashboard|150x150](./projects/books-store/Documentation/Images/Angular-WebAPP.PNG)'
+![Web APP Dashboard|150x150](./projects/books-store/Documentation/Images/Add-Book.PNG)'
+![Web APP Dashboard|150x150](./projects/books-store/Documentation/Images/BooksList.PNG)'
+![Web APP Dashboard|150x150](./projects/books-store/Documentation/Images/Edit-Book.PNG)'
+![Web APP Dashboard|150x150](./projects/books-store/Documentation/Images/Delete-Book.PNG)'
 
-### Technologies Used
+### 1.2. Web API
 
-1. Node JS + Express Web API
-2. Angular 10 UI
-3. Mongo Db [Atlas](https://cloud.mongodb.com/)
+![Web API Output|150x150](./projects/books-store/Documentation/Images/NodeJS-WebAPI.PNG)
 
+*********************************************************************************************************************************************************************
 
+## 2. [Simple gRPC Server and Client in .Net Core, Node JS, Python, GoLang](https://github.com/vishipayyallore/mini-projects-2020/tree/master/Projects/grpc-helloworld)
 
+### 2.1. gRPC Server and Client in **.Net Core C#**
 
+![.Net Core Output|150x150](./projects/grpc-helloworld/Documentation/Images/gRPC_In_CSharp.PNG)
+
+### 2.2. gRPC Server and Client in **Node JS**
+
+![Node JS Output|150x150](./projects/grpc-helloworld/Documentation/Images/gRPC_In_NodeJS.PNG)
+
+### 2.3. gRPC Server and Client in **Python**
+
+![Python Output|150x150](./projects/grpc-helloworld/Documentation/Images/gRPC_In_Python.PNG)
+
+### 2.4. gRPC Server and Client in **GoLang**
+
+![Python Output|150x150](./projects/grpc-helloworld/Documentation/Images/gRPC_In_GoLang.PNG)
