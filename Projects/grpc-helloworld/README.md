@@ -1,20 +1,34 @@
 # Simple gRPC Samples in .Net Core, Node JS, and Python
 
-## Steps to execute gRPC Server and Client in .Net Core
+## 1. Output of gRPC Server and Client in .Net Core, Node JS, Python
 
-### To be done
+### 1.1. gRPC Server and Client in .Net Core
+
+![.Net Core Output|150x150](./Documentation/Images/gRPC_In_CSharp.PNG)
+
+### 1.2. gRPC Server and Client in Node JS
+
+![Node JS Output|150x150](./Documentation/Images/gRPC_In_NodeJS.PNG)
+
+### 1.3. gRPC Server and Client in Python
+
+![Python Output|150x150](./Documentation/Images/gRPC_In_Python.PNG)
+
+## 2. Steps to execute gRPC Server and Client in .Net Core
+
+### 2.1. To be done
 
 
-## Steps to execute gRPC Server and Client in Node JS
+## 3. Steps to execute gRPC Server and Client in Node JS
 
-### Packages to be installed
+### 3.1. Packages to be installed
 
 1. npm i google-protobuf
 2. npm i grpc
 3. npm i grpc-tools
 4. npm i protoc-gen-grpc
 
-### To Generate the files using protoc
+### 3.2. To Generate the files using protoc
 
 Execute the below mentioned command from the root folder example **D:/LordKrishna/GitHub/mini-projects-2020/Projects/grpc-helloworld/calculation-innodejs** where package.json file exists.
 
@@ -25,15 +39,15 @@ protoc -I=D:/LordKrishna/GitHub/mini-projects-2020/Projects/grpc-helloworld/calc
 ```
 
 
-## Steps to execute gRPC Server and Client in Python
+## 4. Steps to execute gRPC Server and Client in Python
 
-### Packages to be installed
+### 4.1. Packages to be installed
 
 1. python -m pip install --upgrade pip
 2. python -m pip install grpcio
 3. python -m pip install grpcio-tools
 
-### To Generate the files using protoc
+### 4.2. To Generate the files using protoc
 
 **We need to specify the absolute path**
 
@@ -43,6 +57,7 @@ Execute the below mentioned command inside the **Protos** folder
 python -m grpc_tools.protoc -I=D:\LordKrishna\GitHub\mini-projects-2020\Projects\grpc-helloworld\calculation-inpython\src\protos --python_out=D:\LordKrishna\GitHub\mini-projects-2020\Projects\grpc-helloworld\calculation-inpython\src\protos\generated --grpc_python_out=D:\LordKrishna\GitHub\mini-projects-2020\Projects\grpc-helloworld\calculation-inpython\src\protos\generated calculations.proto
 ```
 
+*******************************************************************************************************************************
 
 ## Packages to be installed
 

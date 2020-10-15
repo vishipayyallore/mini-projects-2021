@@ -18,11 +18,13 @@ class CalculationsServer(calculations_service.CalculationServiceServicer):
         # get the numbers incoming request
         value1 = int(request.value1)
         value2 = int(request.value2)
+        print('Received the AddNumbers request with', value1, value2)
 
         sum = value1 + value2
 
         result = {'sum': sum}
 
+        print('Sending the AddNumbers response', sum)
         return calculations_messages.AddResponse(**result)
 
 

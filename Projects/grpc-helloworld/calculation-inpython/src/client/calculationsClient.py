@@ -19,9 +19,12 @@ def run():
     with grpc.insecure_channel('localhost:50051') as channel:
 
         stub = calculations_service.CalculationServiceStub(channel)
+
+        print("Invoking AddNumbers() in gRPC Server.")
+
         response = stub.AddNumbers(calculations_messages.AddRequest(value1=1001, value2=2002))
     
-    print("Output received: ", response.sum)
+        print("Output received: ", response.sum)
 
 
 if __name__ == '__main__':
