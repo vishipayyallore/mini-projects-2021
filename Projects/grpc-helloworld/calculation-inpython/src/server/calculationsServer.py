@@ -4,9 +4,9 @@ import grpc
 
 import sys
 sys.path.insert(0, '../protos/generated')
-
-import calculations_pb2 as calculations_messages
 import calculations_pb2_grpc as calculations_service
+import calculations_pb2 as calculations_messages
+
 
 class CalculationsServer(calculations_service.CalculationServiceServicer):
 
