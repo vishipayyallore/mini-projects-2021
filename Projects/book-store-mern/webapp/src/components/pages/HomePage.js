@@ -12,7 +12,7 @@ function HomePage() {
                         <div className="card-body">
                             <h5 className="card-title">Books</h5>
                             <p className="card-text">Library Books Module. Add, View, Edit and Delete Books. The backend is Node JS + Express. It using Mongo Db for data store</p>
-                            <Link to="/books" className="btn btn-primary shadow">Books</Link>
+                            <Link to="/list-books" className="btn btn-primary shadow">Books</Link>
                         </div>
                     </div>
                 </div>

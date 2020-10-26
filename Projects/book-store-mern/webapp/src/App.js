@@ -8,6 +8,7 @@ import SideNavbar from "./components/layout/SideNavBar";
 import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
 import PageNotFound from "./components/shared/PageNotFound";
+import ListBooksPage from "./components/books/ListBooksPage";
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                         <Switch>
                             <Route path="/" exact component={HomePage} />
                             <Route path="/about" component={AboutPage} />
+                            <Route path="/list-books" component={ListBooksPage} />
                             <Route component={PageNotFound} />
                         </Switch>
                     </div>
