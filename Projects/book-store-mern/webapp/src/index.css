@@ -1,5 +1,24 @@
 .top-navbar-color {
-	background: #3f51b5;
+	background:#154360;
+	color: white;
+}
+
+.button-primary {
+	background-color: #154360;
+	color: azure;
+}
+
+.sidenav {
+	height: inherit;
+	width: 15%;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	transition: 0.5s;
+}
+
+.bg-sidebar {
+	background: #D4E6F1;
 	color: white;
 }
 
@@ -26,7 +45,7 @@
 }
 
 footer {
-	background: #3f51b5;
+	background:#154360;
 	color: white;
 	padding: 1px;
 	bottom: 0;
