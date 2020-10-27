@@ -24,4 +24,4 @@
 
 ### 3. books-store **MERN** stack Application
 
-![Node JS Output|150x150](./Projects/book-store-mern/Documentation/Images/Dashboard.PNG)
+![Node JS Output|150x150](./Projects/book-store-mern/Documentation/Images/ListBooks.PNG)

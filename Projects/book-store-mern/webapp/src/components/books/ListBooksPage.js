@@ -22,7 +22,9 @@ function ListBooksPage() {
                 </div>
                 <div className="card-body">
                     <div>
-                        <Link to="/books" className="btn btn-primary shadow mb-2"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i> Add</Link>
+                        <a href="/add-book" className="float">
+                            <i className="fa fa-plus float-margintop"></i>
+                        </a>
                     </div>
                     <table className='table table-striped table-bordered' aria-labelledby="tableLabel">
                         <thead className="thead-dark">
@@ -46,10 +48,10 @@ function ListBooksPage() {
                                             <td>{book.author}</td>
                                             <td>{book.title}</td>
                                             <th scope="col">
-                                            <Link to="/edit-book" className="btn btn-success shadow mr-2">
-                                            <i class="fa fa-edit fa-fw" aria-hidden="true"></i> Edit</Link>
-                                            <Link to="/delete-book" className="btn btn-danger shadow">
-                                            <i class="fa fa-trash" aria-hidden="true"></i> Delete</Link>
+                                                <Link to="/edit-book" className="btn btn-warning btn-sm ml-2 shadow mr-2">
+                                                    <i className="fa fa-edit fa-fw" aria-hidden="true"></i> Edit</Link>
+                                                <Link to="/delete-book" className="btn btn-danger btn-sm ml-2 shadow">
+                                                    <i className="fa fa-trash" aria-hidden="true"></i> Delete</Link>
                                             </th>
                                         </tr>
                                     );

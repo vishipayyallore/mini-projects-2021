@@ -1,5 +1,5 @@
 .top-navbar-color {
-	background:#154360;
+	background: #154360;
 	color: white;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .bg-sidebar {
-	background: #D4E6F1;
+	background: #d4e6f1;
 	color: white;
 }
 
@@ -45,9 +45,32 @@
 }
 
 footer {
-	background:#154360;
+	background: #154360;
 	color: white;
 	padding: 1px;
 	bottom: 0;
 	vertical-align: middle;
 }
+
+.float {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	right: 40px;
+	top: 74px;
+	background-color: #154360;
+	color: #fff;
+	border-radius: 50px;
+	text-align: center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.float-margintop {
+	margin-top: 22px;
+}
+
+/*
+a:hover {
+	background-color: yellow;
+}
+*/
