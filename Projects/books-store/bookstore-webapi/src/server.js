@@ -8,7 +8,7 @@ const dotenv = require('dotenv');
 // Load the Configuration from the given Path
 const _config = dotenv.config({ path: path.resolve(process.cwd(), 'src/config/.env')});
 
-var port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 mongoDbConnection
     .connectToMongoDb()
