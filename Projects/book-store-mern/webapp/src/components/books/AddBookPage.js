@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import { saveBook } from "../../services/booksService";
 
 function AddBookPage() {
+
+    let history = useHistory();
 
     const [book, setBook] = useState({
         title: "",
@@ -13,9 +16,15 @@ function AddBookPage() {
     });
 
     function handleBookSubmit(event) {
-        debugger;
         event.preventDefault();
-        setBook(saveBook(book));
+        saveBook(book)
+        .then(_ => {
+            history.push('/list-books');
+            toast.success("Book saved.");
+        })
+        .catch(_ => {
+            toast.error("Error saving book");
+        });
     }
 
     function handleFormChange({ target }) {
@@ -58,9 +67,9 @@ function AddBookPage() {
                             <input type="text" name="language" className="form-control element ml-4" maxLength="100"
                                 onChange={handleFormChange} value={book.language} />
                         </div>
-
+                        <input type="submit" value="Save" />
                     </form>
-                    <Link to="/list-books" onClick={handleBookSubmit} type="submit" className="btn btn-primary btn-sm ml-2 shadow mr-2">
+                    <Link to="" onClick={handleBookSubmit} type="submit" className="btn btn-primary btn-sm ml-2 shadow mr-2">
                         <i className="fa fa-save fa-fw" aria-hidden="true"></i> Save</Link>
                     <Link to="/list-books" className="btn btn-info btn-sm ml-2 shadow">
                         <i className="fa fa-list" aria-hidden="true"></i> Books List</Link>

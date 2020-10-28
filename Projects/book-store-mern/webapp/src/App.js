@@ -1,5 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import TopNavbar from './components/layout/TopNavbar';
 import Footer from './components/layout/Footer';
@@ -19,6 +21,7 @@ function App() {
             <TopNavbar />
 
             <div className="container-fluid">
+                <ToastContainer autoClose={3000} hideProgressBar />
                 <div className=" row">
                     <div className="col-md-2 d-none d-md-block bg-sidebar sidebar">
                         <div className="sidebar-sticky">
