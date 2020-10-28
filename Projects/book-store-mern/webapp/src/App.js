@@ -9,6 +9,9 @@ import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
 import PageNotFound from "./components/shared/PageNotFound";
 import ListBooksPage from "./components/books/ListBooksPage";
+import AddBookPage from "./components/books/AddBookPage";
+import EditBookPage from "./components/books/EditBookPage";
+import DeleteBookPage from "./components/books/DeleteBookPage";
 
 function App() {
     return (
@@ -27,6 +30,9 @@ function App() {
                             <Route path="/" exact component={HomePage} />
                             <Route path="/about" component={AboutPage} />
                             <Route path="/list-books" component={ListBooksPage} />
+                            <Route path="/add-book" component={AddBookPage} />
+                            <Route path="/edit-book/:id" component={EditBookPage} />
+                            <Route path="/delete-book/:id" component={DeleteBookPage} />
                             <Route component={PageNotFound} />
                         </Switch>
                     </div>

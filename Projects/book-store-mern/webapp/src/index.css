@@ -33,7 +33,7 @@
 }
 
 .navbar a:hover {
-	color: var(--light-color);
+	color: yellow;
 }
 
 .navbar .welcome span {
@@ -59,18 +59,20 @@ footer {
 	right: 40px;
 	top: 74px;
 	background-color: #154360;
-	color: #fff;
+	color: #d4e6f1;
 	border-radius: 50px;
 	text-align: center;
-	box-shadow: 2px 2px 3px #999;
+	box-shadow: 2px 2px 3px royalblue;
 }
 
 .float-margintop {
 	margin-top: 22px;
 }
 
-/*
 a:hover {
-	background-color: yellow;
+	color: white;
 }
-*/
+
+.labelAndTextbox {
+	display: flex;
+}

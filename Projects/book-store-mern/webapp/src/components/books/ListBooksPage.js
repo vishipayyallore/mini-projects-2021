@@ -48,9 +48,9 @@ function ListBooksPage() {
                                             <td>{book.author}</td>
                                             <td>{book.title}</td>
                                             <th scope="col">
-                                                <Link to="/edit-book" className="btn btn-warning btn-sm ml-2 shadow mr-2">
+                                                <Link to={"/edit-book/" + book._id} className="btn btn-warning btn-sm ml-2 shadow mr-2">
                                                     <i className="fa fa-edit fa-fw" aria-hidden="true"></i> Edit</Link>
-                                                <Link to="/delete-book" className="btn btn-danger btn-sm ml-2 shadow">
+                                                <Link to={"/delete-book/" + book._id} className="btn btn-danger btn-sm ml-2 shadow">
                                                     <i className="fa fa-trash" aria-hidden="true"></i> Delete</Link>
                                             </th>
                                         </tr>

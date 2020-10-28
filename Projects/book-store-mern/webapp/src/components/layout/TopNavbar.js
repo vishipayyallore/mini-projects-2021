@@ -27,7 +27,7 @@ const TopNavbar = ({ icon, title }) => {
 
 TopNavbar.defaultProps = {
   title: 'Book Stores',
-  icon: 'fab fa-github'
+  icon: 'fa fa-book'
 };
 
 TopNavbar.propTypes = {
