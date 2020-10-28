@@ -7,6 +7,19 @@ export function getAllBooks() {
         .catch(handleError);
 }
 
+export function saveBook(book) {
+
+    return fetch(baseUrl, {
+        method: "POST", // POST for create, PUT to update when id already exists.
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+            ...book
+        })
+    })
+        .then(handleResponse)
+        .catch(handleError);
+}
+
 async function handleResponse(response) {
 
     if (response.ok) {
