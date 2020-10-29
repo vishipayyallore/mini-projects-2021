@@ -1,16 +1,23 @@
 const baseUrl = 'http://localhost:4000/api/books';
 
-export function getAllBooks() {
+export async function getAllBooks() {
 
     return fetch(baseUrl)
         .then(handleResponse)
         .catch(handleError);
 }
 
-export function saveBook(book) {
+export async function getBookById(bookId) {
+
+    return fetch(`${baseUrl}/${bookId}`)
+        .then(handleResponse)
+        .catch(handleError);
+}
+
+export async function saveBook(book) {
 
     return fetch(baseUrl, {
-        method: "POST", // POST for create, PUT to update when id already exists.
+        method: "POST", 
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
             ...book

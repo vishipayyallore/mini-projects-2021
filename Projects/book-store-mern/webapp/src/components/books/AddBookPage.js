@@ -11,11 +11,11 @@ function AddBookPage() {
     const [book, setBook] = useState({
         title: "",
         author: "No Name",
-        dateOfPublish: "",
+        dateOfPublish: (new Date()).toISOString().slice(0, 10).replace(/-/g, "-").replace("T", " "),
         language: "C#"
     });
 
-    function handleBookSubmit(event) {
+    function handleAddBookSubmit(event) {
         event.preventDefault();
         saveBook(book)
             .then(_ => {
@@ -42,7 +42,7 @@ function AddBookPage() {
             <div className="card-body">
                 <div className="col-md-8 mb-4">
 
-                    <form onSubmit={handleBookSubmit}>
+                    <form>
 
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Title : </label>
@@ -59,7 +59,7 @@ function AddBookPage() {
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Published: </label>
                             <input type="date" name="dateOfPublish" className="form-control element ml-4"
-                                onChange={handleFormChange} value={book.dateOfPublish} />
+                                onChange={handleFormChange} pattern="\d{4}-\d{2}-\d{2}" value={book.dateOfPublish} />
                         </div>
 
                         <div className="form-group divflex labelAndTextbox">
@@ -68,7 +68,7 @@ function AddBookPage() {
                                 onChange={handleFormChange} value={book.language} />
                         </div>
                     </form>
-                    <Link to="" onClick={handleBookSubmit} type="submit" className="btn btn-primary btn-sm ml-2 shadow mr-2">
+                    <Link to="" onClick={handleAddBookSubmit} type="submit" className="btn btn-primary btn-sm ml-2 shadow mr-2">
                         <i className="fa fa-save fa-fw" aria-hidden="true"></i> Save</Link>
                     <Link to="/list-books" className="btn btn-maincolor btn-sm ml-2 shadow">
                         <i className="fa fa-list" aria-hidden="true"></i> Books List</Link>

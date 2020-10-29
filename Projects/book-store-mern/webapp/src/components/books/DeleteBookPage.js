@@ -1,19 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import { saveBook } from "../../services/booksService";
+import { saveBook, getBookById } from "../../services/booksService";
 
-function DeleteBookPage() {
+function DeleteBookPage({ match }) {
 
     let history = useHistory();
 
     const [book, setBook] = useState({
         title: "",
         author: "No Name",
-        dateOfPublish: "",
+        dateOfPublish: (new Date()).toISOString().slice(0, 10).replace(/-/g, "-").replace("T", " "),
         language: "C#"
     });
+
+    useEffect(() => {
+        debugger;
+        getBookById(match.params.id)
+            .then(_book => setBook(_book));
+    }, [match.params.id]);
 
     function handleBookSubmit(event) {
         event.preventDefault();
@@ -42,30 +48,30 @@ function DeleteBookPage() {
             <div className="card-body">
                 <div className="col-md-8 mb-4">
 
-                    <form onSubmit={handleBookSubmit}>
+                    <form>
 
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Title : </label>
                             <input type="text" name="title" className="form-control element ml-4" maxLength="100"
-                            onChange={handleFormChange} value={book.title} />
+                                onChange={handleFormChange} value={book.title} />
                         </div>
 
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Author: </label>
                             <input type="text" name="author" className="form-control element ml-4" maxLength="100"
-                            onChange={handleFormChange} value={book.author} />
+                                onChange={handleFormChange} value={book.author} />
                         </div>
 
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Published: </label>
                             <input type="date" name="dateOfPublish" className="form-control element ml-4"
-                            onChange={handleFormChange} value={book.dateOfPublish} />
+                                onChange={handleFormChange} value={new Date(book.dateOfPublish).toISOString().slice(0, 10).replace(/-/g, "-").replace("T", " ")} />
                         </div>
 
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Language: </label>
                             <input type="text" name="language" className="form-control element ml-4" maxLength="100"
-                            onChange={handleFormChange} value={book.language} />
+                                onChange={handleFormChange} value={book.language} />
                         </div>
                     </form>
                     <Link to="" onClick={handleBookSubmit} type="submit" className="btn btn-danger btn-sm ml-2 shadow mr-2">
