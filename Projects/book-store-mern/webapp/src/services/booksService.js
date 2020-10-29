@@ -17,7 +17,7 @@ export async function getBookById(bookId) {
 export async function saveBook(book) {
 
     return fetch(baseUrl, {
-        method: "POST", 
+        method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
             ...book
@@ -27,10 +27,22 @@ export async function saveBook(book) {
         .catch(handleError);
 }
 
+export async function deleteBookById(bookId) {
+
+    return fetch(`${baseUrl}/${bookId}`, { method: "DELETE" })
+        .then(handleResponse)
+        .catch(handleError);
+}
+
 async function handleResponse(response) {
 
     if (response.ok) {
-        return response.json();
+        if (response.status === 204) {
+            return;
+        }
+        else {
+            return response.json();
+        }
     }
 
     if (response.status !== 200 || response.status !== 201) {

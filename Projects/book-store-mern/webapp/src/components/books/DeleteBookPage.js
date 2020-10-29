@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import { saveBook, getBookById } from "../../services/booksService";
+import { deleteBookById, getBookById } from "../../services/booksService";
 
 function DeleteBookPage({ match }) {
 
@@ -16,20 +16,19 @@ function DeleteBookPage({ match }) {
     });
 
     useEffect(() => {
-        debugger;
         getBookById(match.params.id)
             .then(_book => setBook(_book));
     }, [match.params.id]);
 
-    function handleBookSubmit(event) {
+    function handleDeleteBookSubmit(event) {
         event.preventDefault();
-        saveBook(book)
+        deleteBookById(match.params.id)
             .then(_ => {
                 history.push('/list-books');
-                toast.success("Book saved.");
+                toast.success("Book Deleted.");
             })
             .catch(_ => {
-                toast.error("Error saving book");
+                toast.error("Error deleting book");
             });
     }
 
@@ -74,7 +73,7 @@ function DeleteBookPage({ match }) {
                                 onChange={handleFormChange} value={book.language} />
                         </div>
                     </form>
-                    <Link to="" onClick={handleBookSubmit} type="submit" className="btn btn-danger btn-sm ml-2 shadow mr-2">
+                    <Link to="" onClick={handleDeleteBookSubmit} type="submit" className="btn btn-danger btn-sm ml-2 shadow mr-2">
                         <i className="fa fa-trash" aria-hidden="true"></i> Delete</Link>
                     <Link to="/list-books" className="btn btn-maincolor btn-sm ml-2 shadow">
                         <i className="fa fa-list" aria-hidden="true"></i> Books List</Link>
