@@ -18,13 +18,13 @@ function AddBookPage() {
     function handleBookSubmit(event) {
         event.preventDefault();
         saveBook(book)
-        .then(_ => {
-            history.push('/list-books');
-            toast.success("Book saved.");
-        })
-        .catch(_ => {
-            toast.error("Error saving book");
-        });
+            .then(_ => {
+                history.push('/list-books');
+                toast.success("Book saved.");
+            })
+            .catch(_ => {
+                toast.error("Error saving book");
+            });
     }
 
     function handleFormChange({ target }) {
@@ -67,11 +67,10 @@ function AddBookPage() {
                             <input type="text" name="language" className="form-control element ml-4" maxLength="100"
                                 onChange={handleFormChange} value={book.language} />
                         </div>
-                        <input type="submit" value="Save" />
                     </form>
                     <Link to="" onClick={handleBookSubmit} type="submit" className="btn btn-primary btn-sm ml-2 shadow mr-2">
                         <i className="fa fa-save fa-fw" aria-hidden="true"></i> Save</Link>
-                    <Link to="/list-books" className="btn btn-info btn-sm ml-2 shadow">
+                    <Link to="/list-books" className="btn btn-maincolor btn-sm ml-2 shadow">
                         <i className="fa fa-list" aria-hidden="true"></i> Books List</Link>
 
                 </div>

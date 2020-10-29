@@ -76,3 +76,13 @@ a:hover {
 .labelAndTextbox {
 	display: flex;
 }
+
+.btn-maincolor {
+	background-color: #154360;
+	color: white;
+}
+
+.btn-maincolor a:hover {
+	background-color: #154360;
+	color: yellow;
+}
