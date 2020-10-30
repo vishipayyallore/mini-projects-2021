@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import { saveBook, getBookById } from "../../services/booksService";
+import { editBook, getBookById } from "../../services/booksService";
 
 function EditBookPage({ match }) {
 
     let history = useHistory();
 
     const [book, setBook] = useState({
+        _id: "",
         title: "",
         author: "No Name",
         dateOfPublish: (new Date()).toISOString().slice(0, 10).replace(/-/g, "-").replace("T", " "),
@@ -20,12 +21,12 @@ function EditBookPage({ match }) {
             .then(_book => setBook(_book));
     }, [match.params.id]);
 
-    function handleUpdateBookSubmit(event) {
+    function handleEditBookSubmit(event) {
         event.preventDefault();
-        saveBook(book)
+        editBook(book)
             .then(_ => {
                 history.push('/list-books');
-                toast.success("Book saved.");
+                toast.success("Book Updated.");
             })
             .catch(_ => {
                 toast.error("Error saving book");
@@ -73,7 +74,7 @@ function EditBookPage({ match }) {
                                 onChange={handleFormChange} value={book.language} />
                         </div>
                     </form>
-                    <Link to="" onClick={handleUpdateBookSubmit} type="submit" className="btn btn-warning btn-sm ml-2 shadow mr-2">
+                    <Link to="" onClick={handleEditBookSubmit} type="submit" className="btn btn-warning btn-sm ml-2 shadow mr-2">
                         <i className="fa fa-edit fa-fw" aria-hidden="true"></i> Update</Link>
                     <Link to="/list-books" className="btn btn-maincolor btn-sm ml-2 shadow">
                         <i className="fa fa-list" aria-hidden="true"></i> Books List</Link>

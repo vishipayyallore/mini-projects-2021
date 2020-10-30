@@ -27,6 +27,19 @@ export async function saveBook(book) {
         .catch(handleError);
 }
 
+export async function editBook(book) {
+
+    return fetch(`${baseUrl}/${book._id}`, {
+        method: "PUT",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+            ...book
+        })
+    })
+        .then(handleResponse)
+        .catch(handleError);
+}
+
 export async function deleteBookById(bookId) {
 
     return fetch(`${baseUrl}/${bookId}`, { method: "DELETE" })

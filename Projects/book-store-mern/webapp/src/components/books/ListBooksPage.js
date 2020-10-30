@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import ClockLoader from "react-spinners/ClockLoader";
 
 import { getAllBooks } from "../../services/booksService";
 
 function ListBooksPage() {
 
     const [books, setBooks] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         if (books.length === 0) {
             getAllBooks()
-                .then(_books => setBooks(_books));
+                .then(_books => {
+                    setBooks(_books);
+                    setLoading(false);
+                });
         }
     }, [books.length]);
 
@@ -26,7 +31,15 @@ function ListBooksPage() {
                             <i className="fa fa-plus float-margintop"></i>
                         </a>
                     </div>
-                    <table className='table table-striped table-bordered' aria-labelledby="tableLabel">
+                    <div className="sweet-loading d-flex justify-content-center">
+                        <ClockLoader
+                            size={150}
+                            color={"#123abc"}
+                            loading={loading}
+                        />
+                    </div>
+                    <br></br>
+                    <table className='table table-striped table-bordered' hidden={loading} aria-labelledby="tableLabel">
                         <thead className="thead-dark">
                             <tr>
                                 <th>Book ID</th>
