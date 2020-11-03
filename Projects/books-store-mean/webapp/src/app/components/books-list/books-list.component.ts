@@ -10,7 +10,7 @@ import { BooksService } from '../../services/books.service';
 })
 export class BooksListComponent implements OnInit {
 
-  booksList: IBookDto[] = [];
+  booksList: IBookDto[];
 
   constructor(private booksService: BooksService) {
   }
