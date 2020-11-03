@@ -10,21 +10,21 @@
 }
 
 .top-navbar-color {
-  background: #154360;
+  background: #4C3E46;
   color: white;
 }
 
 .bg-sidebar {
-  background:#0489f554;
+  background:#C0A49F;
   color: white;
 }
 
 .PageTitle {
-  color: #007bff;
+  color: #4C3E46;
 }
 
 footer {
-  background:  #154360;
+  background:  #4C3E46;
   color: white;
   padding: 1px;
   bottom: 0;
@@ -37,11 +37,11 @@ footer {
 	height:60px;
   right:40px;
   top: 70Px;
-	background-color:#154360;
+	background-color:#4C3E46;
 	color: white;
 	border-radius:50px;
 	text-align:center;
-	box-shadow: 2px 2px 3px #049ff38f;
+	box-shadow: 2px 2px 3px #C0A49F;
 }
 
 .float-margintop{
@@ -57,6 +57,11 @@ a:hover{
 }
 
 .btn-maincolor {
-	background-color: #154360!important;
+	background-color: #4C3E46!important;
+	color: white!important;
+}
+
+.table-header-dark{
+	background-color: #4C3E46!important;
 	color: white!important;
 }

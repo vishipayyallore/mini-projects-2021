@@ -1,4 +1,4 @@
-# .Net Virtual Conference Speaker Event
+# .Net Core, SQL Server, Redis Cache, and Angular 10 Full Stack Application
 
 
 ## UI Look and Feel
