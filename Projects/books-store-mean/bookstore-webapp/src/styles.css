@@ -10,21 +10,25 @@
 }
 
 .top-navbar-color {
-  background: #3f51b5;
+  background: rgb(248, 145, 105);
   color: white;
 }
-
+#button{
+  background: rgb(255, 81, 0);
+}
 .bg-sidebar {
-  background: #0428f173;
-  color: white;
+  /* background: #f8b78b83;
+  color: white; */
+
+  background-image: linear-gradient(rgba(228, 36, 36, 0.4), rgba(228, 36, 36, 0.4)), url(https://www.timeshighereducation.com/sites/default/files/accounting.jpg);
 }
 
 .PageTitle {
-  color: royalblue;
+  color: rgb(21, 167, 167);
 }
 
 footer {
-  background: #3f51b5;
+  background: rgb(248, 145, 105);
   color: white;
   padding: 1px;
   bottom: 0;
@@ -43,7 +47,9 @@ footer {
   text-align: center;
   box-shadow: 2px 2px 3px #999;
 }
-
+.btn-primary1{
+  background-color: black;
+}
 .float-margintop {
   margin-top: 22px;
 }
