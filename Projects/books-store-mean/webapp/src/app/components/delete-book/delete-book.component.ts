@@ -1,6 +1,7 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, NgZone, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 import { BooksService } from '../../services/books.service';
 import { IBookDto } from '../../interfaces/book.Dto';
@@ -16,7 +17,7 @@ export class DeleteBookComponent implements OnInit {
   deleteBookForm: FormGroup;
 
   constructor(private route: ActivatedRoute, private bookstoreService: BooksService,
-    private ngZone: NgZone, private router: Router, private formBuilder: FormBuilder) {
+    private ngZone: NgZone, private router: Router, private formBuilder: FormBuilder, private toastr: ToastrService) {
 
     this.deleteBookForm = this.formBuilder.group({
       dateOfPublish: '',
@@ -44,10 +45,12 @@ export class DeleteBookComponent implements OnInit {
 
     console.warn(`Product Delete Request for Id: ${id}`);
 
-    this.bookstoreService.RemoveBookById(id).subscribe(res => {
+    this.bookstoreService.RemoveBookById(id)
+         .subscribe(res => {
 
-      console.log('Book Deleted!')
-      this.ngZone.run(() => this.router.navigateByUrl('/books'))
+      console.log('Book Deleted!');
+      this.toastr.success('Book Deleted !!!', 'Books Store');
+      this.ngZone.run(() => this.router.navigateByUrl('/books'));
     });
   }
 

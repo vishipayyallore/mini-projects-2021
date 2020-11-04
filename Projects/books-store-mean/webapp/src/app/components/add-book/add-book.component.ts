@@ -3,6 +3,7 @@
 import { Router } from '@angular/router';
 import { Component, NgZone, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 import { BooksService } from '../../services/books.service';
 import { IAddBookDto } from '../../interfaces/addBook.Dto';
@@ -18,7 +19,7 @@ export class AddBookComponent implements OnInit {
   addBookForm: FormGroup;
 
   constructor(private bookstoreService: BooksService, private ngZone: NgZone,
-    private router: Router, private formBuilder: FormBuilder) {
+    private router: Router, private formBuilder: FormBuilder, private toastr: ToastrService) {
 
     this.addBookForm = this.formBuilder.group({
       dateOfPublish: '',
@@ -33,10 +34,12 @@ export class AddBookComponent implements OnInit {
 
   onBookAdd(bookData: IAddBookDto): void {
 
-    this.bookstoreService.AddBooks(bookData).subscribe(res => {
+    this.bookstoreService.AddBooks(bookData)
+        .subscribe(res => {
 
-      console.log('Book Added!')
-      this.ngZone.run(() => this.router.navigateByUrl('/books'))
+      console.log('Book Added!');
+      this.toastr.success('Book Added !!!', 'Books Store');
+      this.ngZone.run(() => this.router.navigateByUrl('/books'));
     });
 
   }

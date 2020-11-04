@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { AppComponent } from './app.component';
@@ -32,7 +33,8 @@ import { SideNavbarComponent } from './components/side-navbar/side-navbar.compon
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
