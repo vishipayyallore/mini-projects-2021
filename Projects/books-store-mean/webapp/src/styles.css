@@ -10,21 +10,21 @@
 }
 
 .top-navbar-color {
-  background: #9A8E8F;
-  color: white;
-}
-
-.bg-sidebar {
   background: #463E56;
   color: white;
 }
 
+.bg-sidebar {
+  background: #9A8E8F;
+  color: white;
+}
+
 .PageTitle {
-  color: #9A8E8F;
+  color: #463E56;
 }
 
 footer {
-  background: #9A8E8F;
+  background: #463E56;
   color: white;
   padding: 1px;
   bottom: 0;
@@ -37,11 +37,11 @@ footer {
   height: 60px;
   right: 40px;
   top: 70px;
-  background-color: #9A8E8F;
+  background-color: #463E56;
   color: #fff;
   border-radius: 50px;
   text-align: center;
-  box-shadow: 2px 2px 3px #999;
+  box-shadow: 2px 2px 3px #9A8E8F;
 }
 
 .float-margintop {
@@ -53,16 +53,20 @@ footer {
 }
 
 .btn-maincolor {
-	background-color: #9A8E8F!important;
+	background-color: #463E56!important;
 	color: white!important;
 }
 
 .table-header-dark{
-	background-color: #9A8E8F!important;
+	background-color: #463E56!important;
 	color: white!important;
 }
 
 .spinner {
   font-size:44px;
-  color:#9A8E8F;
+  color:#463E56;
+}
+
+a:hover{
+  color: greenyellow!important;
 }

@@ -66,3 +66,7 @@ footer {
   font-size:44px;
   color:#251B24;
 }
+
+a:hover{
+  color: yellow!important;
+}

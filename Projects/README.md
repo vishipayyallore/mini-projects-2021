@@ -1,6 +1,6 @@
 # Projects
 
-## 1. [books-store MEAN stack Application](https://github.com/vishipayyallore/mini-projects-2020/tree/master/Projects/books-store)
+## 1. [books-store MEAN stack Application](https://github.com/vishipayyallore/mini-projects-2020/tree/master/Projects/books-store-mean)
 
 ## 2. [Simple gRPC Server and Client in **A.** .Net Core, **B.** Node JS, **C.** Python, **D.** GoLang](https://github.com/vishipayyallore/mini-projects-2020/tree/master/Projects/grpc-helloworld)
 
@@ -12,9 +12,9 @@
 
 ## Application Look and Feel
 
-### 1. [MEAN stack Application](https://github.com/vishipayyallore/mini-projects-2020/tree/master/Projects/books-store)
+### 1. [MEAN stack Application](https://github.com/vishipayyallore/mini-projects-2020/tree/master/Projects/books-store-mean)
 
-![Web APP List View|150x150](./books-store/Documentation/Images/BooksList.PNG)
+![Web APP List View|150x150](./books-store-mean/Documentation/Images/BooksList.PNG)
 
 *************************************************************************************************************************************
 
