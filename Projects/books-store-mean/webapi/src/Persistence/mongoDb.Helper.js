@@ -14,8 +14,10 @@ const connectToMongoDb = async () => {
 
         if (error) {
 
+            // TODO: Make it RED color
             console.log(`Error Connecting to Cloud MongoDb ${error}`);
-            throw new Error(error);
+            // Exit Process with Failure
+            process.exit(1);
         } else {
 
             // Connecting to the MongoDb Cloud Instance
