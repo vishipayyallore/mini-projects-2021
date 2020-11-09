@@ -4,7 +4,7 @@
   </div>
   <div class="card-body container">
     <!-- Form -->
-    <div class="col-md-8 mb-4 shadow">
+    <div class="col-md-8 mb-4 shadow px-2 py-2">
       <form [formGroup]="professorForm" (ngSubmit)="onProfessorAdd(professorForm.value)" novalidate>
 
         <div class="form-group divflex labelAndTextbox">
@@ -34,10 +34,12 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary shadow">
-          <i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
-        <button type="button" class="btn btn-maincolor ml-2 shadow" [routerLink]="['/professors']">
-          <i class="fa fa-table" aria-hidden="true"></i> List</button>
+        <div class="form-group divflex labelAndTextbox ml-3">
+          <button type="submit" class="btn btn-primary shadow">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+          <button type="button" class="btn btn-maincolor ml-2 shadow" [routerLink]="['/professors']">
+            <i class="fa fa-table" aria-hidden="true"></i> List</button>
+        </div>
 
       </form>
     </div>

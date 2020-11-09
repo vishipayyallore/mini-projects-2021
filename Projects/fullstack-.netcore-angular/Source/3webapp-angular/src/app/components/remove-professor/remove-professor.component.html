@@ -4,7 +4,7 @@
   </div>
   <div class="card-body">
     <!-- Form -->
-    <div class="col-md-8 mb-4" *ngIf="professor">
+    <div class="col-md-8 mb-4 shadow px-2 py-2" *ngIf="professor">
       <form [formGroup]="professorForm" (ngSubmit)="onProfessorRemove(professor.professorId, professorForm.value)"
         novalidate>
 
@@ -46,10 +46,12 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-danger shadow">
-          <i class="fa fa-trash-o fa-lg"></i> Remove</button>
-        <button type="button" class="btn btn-maincolor ml-2 shadow" [routerLink]="['/professors']">
-          <i class="fa fa-table" aria-hidden="true"></i> List</button>
+        <div class="form-group divflex labelAndTextbox ml-3">
+          <button type="submit" class="btn btn-danger shadow">
+            <i class="fa fa-trash-o fa-lg"></i> Remove</button>
+          <button type="button" class="btn btn-maincolor ml-2 shadow" [routerLink]="['/professors']">
+            <i class="fa fa-table" aria-hidden="true"></i> List</button>
+        </div>
 
       </form>
     </div>
