@@ -1,6 +1,7 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 import { AddProfessorDto } from '../../interfaces/professor.Dto';
 import { ProfessorsService } from '../../services/professors.service';
@@ -16,7 +17,7 @@ export class AddProfessorComponent implements OnInit {
   professorForm: FormGroup;
 
   constructor(private route: ActivatedRoute, private professorsService: ProfessorsService,
-    private ngZone: NgZone, private router: Router, private formBuilder: FormBuilder) {
+    private ngZone: NgZone, private router: Router, private formBuilder: FormBuilder, private toastr: ToastrService) {
 
     this.professorForm = this.formBuilder.group({
       name: '',
@@ -35,7 +36,9 @@ export class AddProfessorComponent implements OnInit {
     console.warn(`Professor Add Request received`);
 
     this.professorsService.AddProfessor(professorData).subscribe(res => {
+
       console.log('Professor Added!')
+      this.toastr.success('Professor Added.', 'College');
       this.ngZone.run(() => this.router.navigateByUrl('/professors'))
     });
   }

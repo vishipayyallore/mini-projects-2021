@@ -9,7 +9,7 @@ import { ProfessorDto } from '../../interfaces/professor.Dto';
   styleUrls: ['./professors-list.component.css'],
 })
 export class ProfessorsListComponent implements OnInit {
-  professorsList: ProfessorDto[] = [];
+  professorsList: ProfessorDto[];
 
   constructor(private professorsService: ProfessorsService) {}
 
