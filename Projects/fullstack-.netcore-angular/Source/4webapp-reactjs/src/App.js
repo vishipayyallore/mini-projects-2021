@@ -8,6 +8,12 @@ import Footer from './components/layout/Footer';
 import SideNavbar from "./components/layout/SideNavBar";
 
 import DashboardPage from "./components/pages/DashboardPage";
+import AboutPage from "./components/pages/AboutPage";
+import PageNotFound from "./components/shared/PageNotFound";
+import AddProfessorPage from "./components/professors/AddProfessorPage";
+import EditProfessorPage from "./components/professors/EditProfessorPage";
+import DeleteProfessorPage from "./components/professors/DeleteProfessorPage";
+import ListProfessorsPage from "./components/professors/ListProfessorsPage";
 
 function App() {
   return (
@@ -26,7 +32,14 @@ function App() {
                     </div>
                     <div className="col-md-10 ml-sm-auto col-lg-10 px-4">
                     <Switch>
+                            <Route path="/dashboard" exact component={DashboardPage} />
+                            <Route path="/about" component={AboutPage} />
+                            <Route path="/professors" component={ListProfessorsPage} />
+                            <Route path="/add-professor" component={AddProfessorPage} />
+                            <Route path="/edit-professor" component={EditProfessorPage} />
+                            <Route path="/delete-professor" component={DeleteProfessorPage} />
                             <Route path="/" exact component={DashboardPage} />
+                            <Route component={PageNotFound} />
                         </Switch>
                     </div>
                 </div>

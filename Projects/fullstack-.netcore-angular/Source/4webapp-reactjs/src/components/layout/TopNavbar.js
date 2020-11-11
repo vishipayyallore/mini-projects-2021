@@ -6,7 +6,7 @@ const TopNavbar = ({ icon, title }) => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark top-navbar-color">
       <div className="container">
-        <Link to="/" className="navbar-brand"><i className="fa fa-book" aria-hidden="true"></i> College</Link>
+        <Link to="/dashboard" className="navbar-brand"><i className="fa fa-book" aria-hidden="true"></i> College</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
           <span className="navbar-toggler-icon"></span>
         </button>

@@ -12,7 +12,7 @@ function DashboardPage() {
                         <div className="card-body">
                             <h5 className="card-title">Professors</h5>
                             <p className="card-text">College Professors Module. View, Edit and Delete Professors. The backend is .Net Core 3.1 with EF Core and SQL Server. It also uses Redis Cache.</p>
-                            <Link to="/list-professors" className="btn btn-maincolor shadow">Professors</Link>
+                            <Link to="/professors" className="btn btn-maincolor shadow">Professors</Link>
                         </div>
                     </div>
                 </div>
