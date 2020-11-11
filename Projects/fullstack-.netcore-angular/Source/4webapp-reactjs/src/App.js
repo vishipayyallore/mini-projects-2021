@@ -20,30 +20,30 @@ function App() {
 
     <>
 
-      <TopNavbar />
+      <TopNavbar title="College" />
 
       <div className="container-fluid">
-                <ToastContainer autoClose={3000} hideProgressBar />
-                <div className=" row">
-                    <div className="col-md-2 d-none d-md-block bg-sidebar sidebar">
-                        <div className="sidebar-sticky">
-                            <SideNavbar />
-                        </div>
-                    </div>
-                    <div className="col-md-10 ml-sm-auto col-lg-10 px-4">
-                    <Switch>
-                            <Route path="/dashboard" exact component={DashboardPage} />
-                            <Route path="/about" component={AboutPage} />
-                            <Route path="/professors" component={ListProfessorsPage} />
-                            <Route path="/add-professor" component={AddProfessorPage} />
-                            <Route path="/edit-professor" component={EditProfessorPage} />
-                            <Route path="/delete-professor" component={DeleteProfessorPage} />
-                            <Route path="/" exact component={DashboardPage} />
-                            <Route component={PageNotFound} />
-                        </Switch>
-                    </div>
-                </div>
+        <ToastContainer autoClose={3000} hideProgressBar />
+        <div className=" row">
+          <div className="col-md-2 d-none d-md-block bg-sidebar sidebar">
+            <div className="sidebar-sticky">
+              <SideNavbar />
             </div>
+          </div>
+          <div className="col-md-10 ml-sm-auto col-lg-10 px-4">
+            <Switch>
+              <Route path="/dashboard" exact component={DashboardPage} />
+              <Route path="/about" component={AboutPage} />
+              <Route path="/professors" component={ListProfessorsPage} />
+              <Route path="/add-professor" component={AddProfessorPage} />
+              <Route path="/edit-professor" component={EditProfessorPage} />
+              <Route path="/delete-professor" component={DeleteProfessorPage} />
+              <Route path="/" exact component={DashboardPage} />
+              <Route component={PageNotFound} />
+            </Switch>
+          </div>
+        </div>
+      </div>
 
 
       <Footer />
