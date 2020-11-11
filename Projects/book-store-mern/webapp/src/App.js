@@ -28,7 +28,7 @@ function App() {
                             <SideNavbar />
                         </div>
                     </div>
-                    <div className="col-md-9 ml-sm-auto col-lg-10 px-4">
+                    <div className="col-md-10 ml-sm-auto col-lg-10 px-4">
                         <Switch>
                             <Route path="/" exact component={HomePage} />
                             <Route path="/about" component={AboutPage} />
