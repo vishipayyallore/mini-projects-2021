@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import dateFormat from "dateformat";
 import ClockLoader from "react-spinners/ClockLoader";
 
 import { getAllProfessors } from "../../services/professorsService";
@@ -58,7 +59,7 @@ function ListProfessorsPage() {
                     <tr key={professor.professorId}>
                       <td>{professor.professorId}</td>
                       <td>{professor.name}</td>
-                      <td>{new Date(professor.doj).toLocaleDateString()}</td>
+                      <td>{dateFormat(professor.doj, "mmm dd, yyyy")}</td>
                       <td>{professor.teaches}</td>
                       <td>{professor.salary}</td>
                       <td>{professor.isPhd.toString()}</td>
