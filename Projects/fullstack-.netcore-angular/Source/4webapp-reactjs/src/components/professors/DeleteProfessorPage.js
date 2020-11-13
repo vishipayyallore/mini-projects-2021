@@ -47,7 +47,7 @@ function DeleteProfessorPage({ match }) {
         <h2 className="PageTitle">Delete Book</h2>
       </div>
       <div className="card-body">
-        <div className="col-md-8 mb-4">
+        <div className="col-md-8 mb-4 shadow px-2 py-2">
           <form>
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Id : </label>
