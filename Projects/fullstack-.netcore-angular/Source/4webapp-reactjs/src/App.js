@@ -36,8 +36,8 @@ function App() {
               <Route path="/about" component={AboutPage} />
               <Route path="/professors" component={ListProfessorsPage} />
               <Route path="/add-professor" component={AddProfessorPage} />
-              <Route path="/edit-professor" component={EditProfessorPage} />
-              <Route path="/delete-professor" component={DeleteProfessorPage} />
+              <Route path="/edit-professor/:professorId" component={EditProfessorPage} />
+              <Route path="/delete-professor/:professorId" component={DeleteProfessorPage} />
               <Route path="/" exact component={DashboardPage} />
               <Route component={PageNotFound} />
             </Switch>

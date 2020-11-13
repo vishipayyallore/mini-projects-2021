@@ -28,7 +28,7 @@ function ListProfessorsPage() {
         </div>
         <div className="card-body">
           <div>
-            <a href="/add-book" className="float">
+            <a href="/add-professor" className="float">
               <i className="fa fa-plus float-margintop"></i>
             </a>
           </div>
@@ -40,7 +40,7 @@ function ListProfessorsPage() {
             />
           </div>
           <br></br>
-          <table className='table table-striped table-bordered' hidden={loading} aria-labelledby="tableLabel">
+          <table className='table table-striped table-bordered shadow' hidden={loading} aria-labelledby="tableLabel">
             <thead className="thead-dark">
               <tr>
                 <th>Professor Id</th>
@@ -64,9 +64,9 @@ function ListProfessorsPage() {
                       <td>{professor.salary}</td>
                       <td>{professor.isPhd.toString()}</td>
                       <th scope="col">
-                        <Link to={"/edit-book/" + professor.professorId} className="btn btn-warning btn-sm ml-2 shadow mr-2">
+                        <Link to={"/edit-professor/" + professor.professorId} className="btn btn-warning btn-sm ml-2 shadow mr-2">
                           <i className="fa fa-edit fa-fw" aria-hidden="true"></i> Edit</Link>
-                        <Link to={"/delete-book/" + professor.professorId} className="btn btn-danger btn-sm ml-2 shadow">
+                        <Link to={"/delete-professor/" + professor.professorId} className="btn btn-danger btn-sm ml-2 shadow">
                           <i className="fa fa-trash" aria-hidden="true"></i> Delete</Link>
                       </th>
                     </tr>
