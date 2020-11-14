@@ -47,11 +47,11 @@ namespace College.WebAPI
             services.AddScoped<IProfessorsSqlBll, ProfessorsSqlBll>();
             services.AddScoped<IProfessorsSqlDal, ProfessorsSqlDal>();
 
-//#if DEBUG
-//            // services.AddScoped<IProfessorsSqlDal, MockPaymentGateway>();
-//#else
-//            // services.AddScoped<IProfessorsSqlDal, RealPaymentGateway>();
-//#endif
+            //#if DEBUG
+            //            // services.AddScoped<IPaymentGateway, MockPaymentGateway>();
+            //#else
+            //            // services.AddScoped<IPaymentGateway, RealPaymentGateway>();
+            //#endif
 
             // Redis Cache Dependencies
             services.AddSingleton(sp =>
