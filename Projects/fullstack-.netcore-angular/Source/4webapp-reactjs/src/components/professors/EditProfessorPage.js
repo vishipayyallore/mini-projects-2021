@@ -24,13 +24,13 @@ function EditProfessorPage({ match }) {
 
   function handleEditProfessorSubmit(event) {
     event.preventDefault();
-    editProfessor(match.params.professorId)
+    editProfessor(professor)
       .then(_ => {
         history.push('/professors');
-        toast.success("Professor Deleted.");
+        toast.success("Professor Edited.");
       })
       .catch(_ => {
-        toast.error("Error deleting Professor");
+        toast.error("Error editing Professor");
       });
   }
 
@@ -41,49 +41,48 @@ function EditProfessorPage({ match }) {
     });
   }
 
-
   return (
     <div className="card shadow mt-2 mb-2">
       <div className="card-header">
-        <h2 className="PageTitle">Delete Book</h2>
+        <h2 className="PageTitle">Edit Book</h2>
       </div>
       <div className="card-body">
         <div className="col-md-8 mb-4 shadow px-2 py-2">
           <form>
-            <div className="form-group divflex labelAndTextbox">
+          <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Id : </label>
-              <input type="text" name="title" readOnly className="form-control element ml-4" maxLength="100"
+              <input type="text" name="professorId" readOnly className="form-control element ml-4" maxLength="100"
                 onChange={handleFormChange} value={professor.professorId} />
             </div>
 
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Name : </label>
-              <input type="text" name="title" className="form-control element ml-4" maxLength="100"
+              <input type="text" name="name" className="form-control element ml-4" maxLength="100"
                 onChange={handleFormChange} value={professor.name} />
             </div>
 
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">DOJ: </label>
-              <input type="date" name="dateOfPublish" className="form-control element ml-4"
+              <input type="date" name="doj" className="form-control element ml-4"
                 onChange={handleFormChange} value={new Date(professor.doj).toISOString().slice(0, 10).replace(/-/g, "-").replace("T", " ")} />
             </div>
 
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Teaches : </label>
-              <input type="text" name="title" className="form-control element ml-4" maxLength="100"
+              <input type="text" name="teaches" className="form-control element ml-4" maxLength="100"
                 onChange={handleFormChange} value={professor.teaches} />
             </div>
 
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Salary : </label>
-              <input type="text" name="title" className="form-control element ml-4" maxLength="100"
+              <input type="text" name="salary" className="form-control element ml-4" maxLength="100"
                 onChange={handleFormChange} value={professor.salary} />
             </div>
 
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Is Phd: </label>
-              <div class="col-sm-1">
-                <input type="checkbox" onChange={handleFormChange} className="form-control element ml-2" checked={professor.isPhd} />
+              <div className="col-sm-1">
+                <input type="checkbox" name="isPhd" onChange={handleFormChange} className="form-control element ml-2" checked={professor.isPhd} />
               </div>
             </div>
 

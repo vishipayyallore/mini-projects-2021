@@ -51,41 +51,42 @@ function DeleteProfessorPage({ match }) {
           <form>
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Id : </label>
-              <input type="text" name="title" readOnly className="form-control element ml-4" maxLength="100"
+              <input type="text" name="professorId" readOnly className="form-control element ml-4" maxLength="100"
                 onChange={handleFormChange} value={professor.professorId} />
             </div>
 
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Name : </label>
-              <input type="text" name="title" readOnly className="form-control element ml-4" maxLength="100"
+              <input type="text" name="name" readOnly className="form-control element ml-4" maxLength="100"
                 onChange={handleFormChange} value={professor.name} />
             </div>
 
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">DOJ: </label>
-              <input type="date" name="dateOfPublish" readOnly className="form-control element ml-4"
+              <input type="date" name="doj" readOnly className="form-control element ml-4"
                 onChange={handleFormChange} value={new Date(professor.doj).toISOString().slice(0, 10).replace(/-/g, "-").replace("T", " ")} />
             </div>
 
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Teaches : </label>
-              <input type="text" name="title" readOnly className="form-control element ml-4" maxLength="100"
+              <input type="text" name="teaches" readOnly className="form-control element ml-4" maxLength="100"
                 onChange={handleFormChange} value={professor.teaches} />
             </div>
 
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Salary : </label>
-              <input type="text" name="title" readOnly className="form-control element ml-4" maxLength="100"
+              <input type="text" name="salary" readOnly className="form-control element ml-4" maxLength="100"
                 onChange={handleFormChange} value={professor.salary} />
             </div>
 
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Is Phd: </label>
               <div class="col-sm-1">
-                <input type="checkbox" class="form-control element ml-2" checked={professor.isPhd} readOnly />
+                <input type="checkbox" name="isPhd" class="form-control element ml-2" checked={professor.isPhd} readOnly />
               </div>
             </div>
           </form>
+
           <Link to="" onClick={handleDeleteProfessorSubmit} type="submit" className="btn btn-danger btn-sm ml-2 shadow mr-2">
             <i className="fa fa-trash" aria-hidden="true"></i> Delete</Link>
           <Link to="/professors" className="btn btn-maincolor btn-sm ml-2 shadow">

@@ -29,7 +29,7 @@ export async function saveProfessor(professorDto) {
 
 export async function editProfessor(professorDto) {
 
-    return fetch(`${baseUrl}/${professorDto.professorId}`, {
+    return fetch(`${baseUrl}`, {
         method: "PUT",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
