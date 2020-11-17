@@ -30,9 +30,12 @@ function AddProfessorPage() {
   }
 
   function handleFormChange({ target }) {
+
+    const value = (target.type === 'checkbox') ? target.checked : (target.type === 'number') ? +target.value : target.value;
+
     setProfessor({
       ...professor,
-      [target.name]: target.value
+      [target.name]: value
     });
   }
 

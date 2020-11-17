@@ -35,9 +35,12 @@ function EditProfessorPage({ match }) {
   }
 
   function handleFormChange({ target }) {
+
+    const value = (target.type === 'checkbox') ? target.checked : (target.type === 'number') ? +target.value : target.value;
+
     setProfessor({
       ...professor,
-      [target.name]: target.value
+      [target.name]: value
     });
   }
 
@@ -75,7 +78,7 @@ function EditProfessorPage({ match }) {
 
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Salary : </label>
-              <input type="text" name="salary" className="form-control element ml-4" maxLength="100"
+              <input type="number" name="salary" className="form-control element ml-4" maxLength="100"
                 onChange={handleFormChange} value={professor.salary} />
             </div>
 
