@@ -81,8 +81,8 @@ function DeleteProfessorPage({ match }) {
 
             <div className="form-group divflex labelAndTextbox">
               <label className="element col-md-2">Is Phd: </label>
-              <div class="col-sm-1">
-                <input type="checkbox" name="isPhd" class="form-control element ml-2" checked={professor.isPhd} readOnly />
+              <div className="col-sm-1">
+                <input type="checkbox" name="isPhd" className="form-control element ml-2" checked={professor.isPhd} readOnly />
               </div>
             </div>
           </form>
