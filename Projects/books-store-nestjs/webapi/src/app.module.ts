@@ -7,7 +7,10 @@ import { BooksController } from './controllers/books/books.controller';
   imports: [],
   controllers: [
     AppController,
-    BooksController],
-  providers: [AppService],
+    BooksController
+  ],
+  providers: [
+    AppService
+  ],
 })
 export class AppModule { }
