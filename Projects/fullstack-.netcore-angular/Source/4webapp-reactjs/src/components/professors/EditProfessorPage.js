@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import reactPlugin from '../../services/app-insights.service';
+
 import { editProfessor, getProfessorById } from "../../services/professorsService";
 
 function EditProfessorPage({ match }) {
@@ -93,11 +96,12 @@ function EditProfessorPage({ match }) {
           <Link to="" onClick={handleEditProfessorSubmit} type="submit" className="btn btn-warning btn-sm ml-2 shadow mr-2">
             <i className="fa fa-trash" aria-hidden="true"></i> Update</Link>
           <Link to="/professors" className="btn btn-maincolor btn-sm ml-2 shadow">
-            <i className="fa fa-list" aria-hidden="true"></i> Books List</Link>
+            <i className="fa fa-list" aria-hidden="true"></i> List</Link>
         </div>
       </div>
     </div>
   );
 }
 
-export default EditProfessorPage;
+// export default EditProfessorPage;
+export default withAITracking(reactPlugin, EditProfessorPage);

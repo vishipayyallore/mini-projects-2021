@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import reactPlugin from '../../services/app-insights.service';
+
 import { saveProfessor } from "../../services/professorsService";
 
 function AddProfessorPage() {
@@ -85,7 +88,7 @@ function AddProfessorPage() {
           <Link to="" onClick={handleSaveProfessorSubmit} type="submit" className="btn btn-primary btn-sm ml-2 shadow mr-2">
             <i className="fa fa-save fa-fw" aria-hidden="true"></i> Save</Link>
           <Link to="/professors" className="btn btn-maincolor btn-sm ml-2 shadow">
-            <i className="fa fa-list" aria-hidden="true"></i> Books List</Link>
+            <i className="fa fa-list" aria-hidden="true"></i> List</Link>
 
         </div>
       </div>
@@ -93,4 +96,5 @@ function AddProfessorPage() {
   );
 }
 
-export default AddProfessorPage;
+// export default AddProfessorPage;
+export default withAITracking(reactPlugin, AddProfessorPage);

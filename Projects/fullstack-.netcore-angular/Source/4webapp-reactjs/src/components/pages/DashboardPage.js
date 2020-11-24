@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import reactPlugin from '../../services/app-insights.service';
+
 function DashboardPage() {
     return (
         <>
@@ -54,4 +57,5 @@ function DashboardPage() {
     );
 }
 
-export default DashboardPage;
+// export default DashboardPage;
+export default withAITracking(reactPlugin, DashboardPage);

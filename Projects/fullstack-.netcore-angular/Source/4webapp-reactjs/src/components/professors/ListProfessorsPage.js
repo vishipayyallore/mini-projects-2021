@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import dateFormat from "dateformat";
 import ClockLoader from "react-spinners/ClockLoader";
 
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import reactPlugin from '../../services/app-insights.service';
+
 import { getAllProfessors } from "../../services/professorsService";
 
 function ListProfessorsPage() {
@@ -81,4 +84,5 @@ function ListProfessorsPage() {
   );
 }
 
-export default ListProfessorsPage;
+// export default ListProfessorsPage;
+export default withAITracking(reactPlugin, ListProfessorsPage);

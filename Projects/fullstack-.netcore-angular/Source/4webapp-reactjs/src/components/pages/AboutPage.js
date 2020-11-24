@@ -1,5 +1,8 @@
 import React from "react";
 
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import reactPlugin from '../../services/app-insights.service';
+
 function AboutPage() {
   return (
     <>
@@ -9,4 +12,5 @@ function AboutPage() {
   );
 }
 
-export default AboutPage;
+// export default AboutPage;
+export default withAITracking(reactPlugin, AboutPage);
