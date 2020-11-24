@@ -351,3 +351,5 @@ MigrationBackup/
 Projects/grpc-go/
 Projects/book-store-mern/webapp/.env
 Projects/fullstack-.netcore-angular/Source/2RestWebAPI/College.WebAPI/Properties/ServiceDependencies/app-college-azconf-dev - Web Deploy/profile.arm.json
+Projects/fullstack-.netcore-angular/Source/2RestWebAPI/College.WebAPI/Properties/serviceDependencies.app-college-azconf-dev - Web Deploy.json
+Projects/fullstack-.netcore-angular/Source/2RestWebAPI/College.WebAPI/Properties/ServiceDependencies/app-college-azconf-dev - Web Deploy/appInsights1.arm.json

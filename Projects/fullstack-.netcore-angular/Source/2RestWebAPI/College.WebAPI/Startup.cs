@@ -5,6 +5,7 @@ using College.Core.Constants;
 using College.Core.Interfaces;
 using College.SQLServer.DAL;
 using College.SQLServer.DAL.Persistence;
+using Microsoft.ApplicationInsights.AspNetCore.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -30,6 +31,21 @@ namespace College.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // The following line enables Application Insights telemetry collection.
+            services.AddApplicationInsightsTelemetry();
+
+            /*
+            ApplicationInsightsServiceOptions aiOptions = new ApplicationInsightsServiceOptions
+            {
+                // Disables adaptive sampling.
+                EnableAdaptiveSampling = false,
+
+                // Disables QuickPulse (Live Metrics stream).
+                EnableQuickPulseMetricStream = false
+            };
+            services.AddApplicationInsightsTelemetry(aiOptions);
+            */
+
             services.AddControllers();
 
             services.AddCors(o => o.AddPolicy(_policyName, builder =>

@@ -10,6 +10,7 @@
 
 # production
 /build
+/app-college-rjui-azconf-dev
 
 # misc
 .DS_Store

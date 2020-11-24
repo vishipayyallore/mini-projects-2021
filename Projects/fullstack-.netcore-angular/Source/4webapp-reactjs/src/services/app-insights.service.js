@@ -18,5 +18,6 @@ var appInsights = new ApplicationInsights({
     }
 });
 appInsights.loadAppInsights();
+appInsights.trackPageView();
 
 export default reactPlugin;
