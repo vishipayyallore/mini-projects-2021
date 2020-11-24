@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  webApiUrl: "https://localhost:5002/api/v1",
+  appInsights: {
+    instrumentationKey: '[Replace With Your Key]'
+  }
 };
 
 /*

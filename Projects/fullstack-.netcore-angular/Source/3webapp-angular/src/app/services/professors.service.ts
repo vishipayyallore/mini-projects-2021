@@ -4,8 +4,9 @@ import { Observable, throwError, from } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
 import { AddProfessorDto, ProfessorDto } from '../interfaces/professor.Dto';
+import { environment } from 'src/environments/environment';
 
-const baseUrl = 'https://localhost:5002/api/v1';
+const baseUrl = environment.webApiUrl;
 const apiName = 'professors';
 const httpOptions = {
   headers: new HttpHeaders({

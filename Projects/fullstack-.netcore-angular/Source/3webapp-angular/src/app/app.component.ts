@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppInsightsService } from './services/app-insights.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'college-web';
+
+  constructor(private appInsights: AppInsightsService) {
+
+  }
+
 }
