@@ -350,3 +350,4 @@ MigrationBackup/
 .ionide/
 Projects/grpc-go/
 Projects/book-store-mern/webapp/.env
+Projects/fullstack-.netcore-angular/Source/2RestWebAPI/College.WebAPI/Properties/ServiceDependencies/app-college-azconf-dev - Web Deploy/profile.arm.json
