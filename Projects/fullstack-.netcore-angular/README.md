@@ -1,30 +1,38 @@
 # Full Stack Session https://www.azconf.dev/
 
-## Demo of entire solution (**10 Minutes**)
+## **Warm Up** Demo of entire solution (**10 Minutes**)
+> 1. Demo of entire solution on Local Laptop.
+> 2. Demo of entire solution on Azure.
 
-## 1. .Net Core Web API (**30 Minutes**)
-1. Building Professor’s Controller
-2. Executing in IIS Express & Kestrel. launchSettings.json
-3. Layered Solution [Application Core, BLL, SQL DAL, Redis Cache DAL]
-4. User Secrets instead on appSettings.json
-5. Dependency Injection
+## 1. SQL Server (**5 Minutes**)
+> 1. Using Azure Data Studio
+> 2. Making Firewall changes to access SQL Server.
+> 3. Using SQL Scripts we will craete tables, and data population in SQL Azure.
+> 4. Using SQL Scripts included for creating database, tables, and data population.
 
-## 2. SQL Server (**5 Minutes**)
-1. Using Azure Data Studio
-2. SQL Scripts included creating database, tables, and data population
+## 2. .Net Core Web API (**30 Minutes**)
+
+> 1. Building Professor’s Controller
+> 2. Executing in IIS Express & Kestrel. launchSettings.json
+> 3. Implement GetAll() method.
+> 4. User Secrets instead on appSettings.json
+> 5. Dependency Injection
+> 6. Layered Solution [Application Core, BLL, SQL DAL]
+
 
 ## 3. Swagger UI (**10 Minutes**)
-1. Adding Swagger UI to Web API
-2. Testing API using Swagger
+> 1. Adding Swagger UI to Web API
+> 2. Testing API using Swagger
 
 ## 4. Postman Collection (**5 Minutes**)
-1. Using Postman to verify the API
-2. Postman Collection and its advantages.
+> 1. Using Postman to verify the API
+> 2. Postman Collection and its advantages.
 
 ## 5. Redis Cache (Cache Aside Pattern) (**20 Minutes**)
-1. Including the Redis Cache into the mix.
-2. Improving Data Retrieval Time.
-3. Implementing the Cache Aside Pattern.
+> 1. Including the Redis Cache into the mix.
+> 2. Updating Layered Solution to include Redis Cache DAL.
+> 3. Improving Data Retrieval Time.
+> 4. Implementing the Cache Aside Pattern.
 
 ## 6. Angular 10 (**30 Minutes**)
 1. Creating the Angular 10 UI from Scratch

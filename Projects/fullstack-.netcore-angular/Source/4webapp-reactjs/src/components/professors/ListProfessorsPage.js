@@ -31,9 +31,9 @@ function ListProfessorsPage() {
         </div>
         <div className="card-body">
           <div>
-            <a href="/add-professor" className="float">
+            <Link to={"/add-professor"} className="float">
               <i className="fa fa-plus float-margintop"></i>
-            </a>
+            </Link>
           </div>
           <div className="sweet-loading d-flex justify-content-center">
             <ClockLoader
