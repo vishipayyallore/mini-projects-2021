@@ -46,6 +46,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientApps.Common", "Source
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.WebAPI", "Source\2RestWebAPI\College.WebAPI\College.WebAPI.csproj", "{73D3CC75-F208-4DC9-8FD9-6532DE3C93F7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5webapp-blazorwasm", "5webapp-blazorwasm", "{169F5CE4-30EF-4A6F-819F-07F37B6ED3D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "College.BlazorWASM", "Source\5webapp-blazorwasm\College.BlazorWASM\College.BlazorWASM.csproj", "{923AF244-0746-4A68-9CF0-D95F0D2C1AC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +80,10 @@ Global
 		{73D3CC75-F208-4DC9-8FD9-6532DE3C93F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73D3CC75-F208-4DC9-8FD9-6532DE3C93F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73D3CC75-F208-4DC9-8FD9-6532DE3C93F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{923AF244-0746-4A68-9CF0-D95F0D2C1AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{923AF244-0746-4A68-9CF0-D95F0D2C1AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{923AF244-0746-4A68-9CF0-D95F0D2C1AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{923AF244-0746-4A68-9CF0-D95F0D2C1AC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +98,8 @@ Global
 		{B5CA36E8-BCFD-4AAE-881C-321A09B40A04} = {FBD575B8-196D-4FFA-A508-68E51EACBD14}
 		{F16FDF79-50E0-44B0-98D0-C55255FEAE38} = {FBD575B8-196D-4FFA-A508-68E51EACBD14}
 		{73D3CC75-F208-4DC9-8FD9-6532DE3C93F7} = {825B2C62-1A64-4209-B68D-950755A71FC0}
+		{169F5CE4-30EF-4A6F-819F-07F37B6ED3D5} = {566AADCA-4109-475E-AF0F-50C5E7144AB6}
+		{923AF244-0746-4A68-9CF0-D95F0D2C1AC1} = {169F5CE4-30EF-4A6F-819F-07F37B6ED3D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E0DC0899-26DA-4086-9E39-CBE387948C00}

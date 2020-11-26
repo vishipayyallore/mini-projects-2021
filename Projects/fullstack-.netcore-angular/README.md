@@ -74,12 +74,21 @@
 ![Web APP Dashboard|150x150](./Documentation/Images/ReactJS_UI_Dashboard.PNG)
 ![Web APP List|150x150](./Documentation/Images/ReactJS_UI_List.PNG)
 
-## 8. Blazor WASM UI (**20 Minutes**)
-1. Integrating with Web API
-
-## 9. Azure Application Insights (**20 Minutes**)
-1. Integrating the Web API with Application Insights
-
 *****
-> SUMMARY / RECAP / Q&A (**8 Minutes**)
+> BIO BREAK THREE (**8 Minutes**)
+*****
+
+## 8. Blazor WASM UI (**20 Minutes**)
+> 1. Integrating with Web API
+> 2. Deploying Blazor WASM to Azure
+
+![Web APP List|150x150](./Documentation/Images/BlazorWASM_UI_List.PNG)
+
+## 9. Azure Application Insights (**10 Minutes**)
+1. View Application Insights inside Azure Portal
+
+## 10. SUMMARY / RECAP / Q&A (**10 Minutes**)
+*****
+> 1. SUMMARY / RECAP / Q&A 
+> 2. Any open queries, I will get back through email.
 *****

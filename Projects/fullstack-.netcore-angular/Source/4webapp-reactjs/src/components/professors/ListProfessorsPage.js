@@ -44,7 +44,7 @@ function ListProfessorsPage() {
           </div>
           <br></br>
           <table className='table table-striped table-bordered shadow' hidden={loading} aria-labelledby="tableLabel">
-            <thead className="thead-dark">
+            <thead className="table-header-dark">
               <tr>
                 <th>Professor Id</th>
                 <th>Name</th>
