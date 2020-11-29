@@ -1,5 +1,16 @@
 # Conferences
 
+## Deploying to Firebase
+
+> 1. install -g firebase-tools
+> 2. firebase login
+> 3. ng add @angular/fire
+> 4. firebase init
+> 5. ng build --prod
+> 6. firebase deploy --only hosting:conferences-29nov2020
+
+-----------------------
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
 ## Development server

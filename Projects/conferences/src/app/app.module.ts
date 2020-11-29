@@ -17,6 +17,8 @@ import { PageNotfoundComponent } from './components/shared/page-notfound/page-no
 import { TopNavbarComponent } from './components/shared/top-navbar/top-navbar.component';
 import { SideNavbarComponent } from './components/shared/side-navbar/side-navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { AboutUsComponent } from './components/company/about-us/about-us.component';
+import { ContactUsComponent } from './components/company/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     PageNotfoundComponent,
     TopNavbarComponent,
     SideNavbarComponent,
-    FooterComponent
+    FooterComponent,
+    AboutUsComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,

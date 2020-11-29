@@ -44,3 +44,13 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Firebase related
+/functions
+.firebaserc
+database.rules.json
+firebase.json
+firestore.indexes.json
+firestore.rules
+remoteconfig.template.json
+storage.rules
