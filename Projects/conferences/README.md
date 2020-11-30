@@ -1,13 +1,24 @@
-# Conferences
+# Conferences (MEAN Stack application)
 
-## Deploying to Firebase
+## Tech Stack
+> 1. Angular (version **11.0.2**).
 
-> 1. install -g firebase-tools
-> 2. firebase login
-> 3. ng add @angular/fire
-> 4. firebase init
-> 5. ng build --prod
-> 6. firebase deploy --only hosting:conferences-29nov2020
+## Deploying Angular 11 application to Firebase
+
+```
+> install -g firebase-tools
+> firebase login
+> ng add @angular/fire
+> firebase init
+> ng build --prod
+> firebase deploy --only hosting:**conferences-29nov2020**
+```
+
+-----------------------
+
+## Application Look and Feel 
+
+![Web APP Dashboard|150x150](./documentation/images/Angular_UI_Dashboard.PNG)
 
 -----------------------
 

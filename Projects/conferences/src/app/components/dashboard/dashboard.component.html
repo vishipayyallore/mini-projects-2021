@@ -1,49 +1,19 @@
 <h1 class="PageTitle">Application Dashboard</h1>
 
-<div class="row mb-4">
-  <div class="col-sm-6">
+<div class="row mb-4" *ngIf="dashboardCards">
+  <div class="col-sm-6 mb-4" *ngFor="let card of dashboardCards">
     <div class="card shadow text-black bg-light">
-      <div class="card-header">Technical Conferences</div>
+      <div class="card-header">{{card.cardHeader}}</div>
       <div class="card-body">
-        <h5 class="card-title">Conferences</h5>
-        <p class="card-text">Details about different conferences being conducted.</p>
+        <h5 class="card-title">{{card.cardTitle}}</h5>
+        <p class="card-text">{{card.cardText}}</p>
         <a href="#" [routerLink]="['/books']" class="btn btn-maincolor shadow">
-          <fa-icon [icon]="['far', 'calendar-alt']"></fa-icon> Conferences
+           {{card.buttonText}}
         </a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card shadow text-black bg-light">
-      <div class="card-header">Technical Events</div>
-      <div class="card-body">
-        <h5 class="card-title">Events</h5>
-        <p class="card-text">Details about different events being conducted.</p>
-        <a href="/" class="btn btn-maincolor shadow">Coming Soon</a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="row mb-4">
-  <div class="col-sm-6">
-    <div class="card shadow text-black bg-light">
-      <div class="card-header">Technical Sessions</div>
-      <div class="card-body">
-        <h5 class="card-title">Sessions</h5>
-        <p class="card-text">Details about different sessions being conducted.</p>
-        <a href="/" class="btn btn-maincolor shadow">Coming Soon</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card shadow text-black bg-light">
-      <div class="card-header">Speakers</div>
-      <div class="card-body">
-        <h5 class="card-title">Speakers</h5>
-        <p class="card-text">Details about different events being conducted.</p>
-        <a href="/" class="btn btn-maincolor shadow">Coming Soon</a>
-      </div>
-    </div>
-  </div>
-</div>
+
+<!--<fa-icon [icon]="['far', 'calendar-alt']"></fa-icon>-->

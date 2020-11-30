@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from "@angular/common";
 import { NgModule } from '@angular/core';
 
 import {
@@ -34,6 +35,7 @@ import { ContactUsComponent } from './components/company/contact-us/contact-us.c
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     FontAwesomeModule
   ],
   providers: [],
