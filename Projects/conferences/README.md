@@ -11,7 +11,7 @@
 > ng add @angular/fire
 > firebase init
 > ng build --prod
-> firebase deploy --only hosting:**conferences-29nov2020**
+> firebase deploy --only hosting:conferences-29nov2020
 ```
 
 -----------------------

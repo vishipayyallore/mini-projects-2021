@@ -20,6 +20,7 @@ import { SideNavbarComponent } from './components/shared/side-navbar/side-navbar
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { AboutUsComponent } from './components/company/about-us/about-us.component';
 import { ContactUsComponent } from './components/company/contact-us/contact-us.component';
+import { DashboardCardsComponent } from './components/dashboard-cards/dashboard-cards.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ContactUsComponent } from './components/company/contact-us/contact-us.c
     FooterComponent,
     AboutUsComponent,
     ContactUsComponent,
+    DashboardCardsComponent,
   ],
   imports: [
     BrowserModule,

@@ -26,27 +26,31 @@ const CARDS: IDashboardDto[] = [
     cardHeader: 'Conferences',
     cardTitle: 'Technical Conferences',
     cardText: 'Details about different conferences being conducted.',
-    buttonText: 'Conferences'
+    buttonText: 'Conferences',
+    buttonIcon: ['far', 'calendar-alt']
   },
   {
     id: '2',
     cardHeader: 'Events',
     cardTitle: 'Technical Events',
     cardText: 'Details about different events being conducted.',
-    buttonText: 'Coming Soon'
+    buttonText: 'Coming Soon',
+    buttonIcon: ['far', 'calendar-alt']
   },
   {
     id: '3',
     cardHeader: 'Sessions',
     cardTitle: 'Technical Sessions',
     cardText: 'Details about different sessions being conducted.',
-    buttonText: 'Coming Soon'
+    buttonText: 'Coming Soon',
+    buttonIcon: ['far', 'calendar-alt']
   },
   {
     id: '4',
     cardHeader: 'Speakers',
     cardTitle: 'Technical Speakers',
     cardText: 'Details about different Speacker.',
-    buttonText: 'Coming Soon'
+    buttonText: 'Coming Soon',
+    buttonIcon: ['far', 'calendar-alt']
   }
 ]

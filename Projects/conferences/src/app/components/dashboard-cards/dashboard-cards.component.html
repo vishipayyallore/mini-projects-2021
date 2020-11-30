@@ -1,22 +1,17 @@
-<h1 class="PageTitle">Application Dashboard</h1>
-
-<app-dashboard-cards [cards]="dashboardCards"></app-dashboard-cards>
-
-<!--
-<div class="row mb-4" *ngIf="dashboardCards">
-  <div class="col-sm-6 mb-4" *ngFor="let card of dashboardCards">
+<div class="container" *ngIf="!cards">
+  <span class="spinner">Loading ... <i class="fa fa-spinner fa-spin"></i></span>
+</div>
+<div class="row mb-4" *ngIf="cards">
+  <div class="col-sm-6 mb-4" *ngFor="let card of cards">
     <div class="card shadow text-black bg-light">
       <div class="card-header">{{card.cardHeader}}</div>
       <div class="card-body">
         <h5 class="card-title">{{card.cardTitle}}</h5>
         <p class="card-text">{{card.cardText}}</p>
         <a href="#" [routerLink]="['/books']" class="btn btn-maincolor shadow">
-           {{card.buttonText}}
+           <fa-icon [icon]="['far', 'calendar-alt']"></fa-icon> {{card.buttonText}}
         </a>
       </div>
     </div>
   </div>
 </div>
--->
-
-<!--<fa-icon [icon]="['far', 'calendar-alt']"></fa-icon>-->

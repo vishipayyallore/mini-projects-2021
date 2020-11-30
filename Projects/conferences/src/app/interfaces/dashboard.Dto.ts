@@ -12,5 +12,7 @@ export interface IDashboardDto {
 
   buttonText: string;
 
+  buttonIcon: string[];
+
 }
 
