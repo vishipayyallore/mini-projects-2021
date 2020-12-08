@@ -10,25 +10,25 @@
 }
 
 .top-navbar-color {
-  background: #201C17;
+  background: #49423E;
   color: white;
 }
 
 .main-content {
-  background-color: #EFF3ED;
+  background-color: #F8F8F7;
 }
 
 .bg-sidebar {
-  background: #94ACC2;
+  background: #966C54;
   color: white;
 }
 
 .PageTitle {
-  color: #201C17;
+  color: #49423E;
 }
 
 footer {
-  background: #201C17;
+  background: #49423E;
   color: white;
   padding: 1px;
   bottom: 0;
@@ -41,7 +41,7 @@ footer {
   height: 60px;
   right: 40px;
   top: 70px;
-  background-color: #201C17;
+  background-color: #49423E;
   color: #fff;
   border-radius: 50px;
   text-align: center;
@@ -57,18 +57,18 @@ footer {
 }
 
 .btn-maincolor {
-	background-color: #201C17!important;
+	background-color: #49423E!important;
 	color: white!important;
 }
 
 .table-header-dark{
-	background-color: #201C17!important;
+	background-color: #49423E!important;
 	color: white!important;
 }
 
 .spinner {
   font-size:44px;
-  color:#201C17;
+  color:#49423E;
 }
 
 a:hover{
