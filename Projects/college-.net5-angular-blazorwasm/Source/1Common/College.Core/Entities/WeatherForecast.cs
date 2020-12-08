@@ -1,6 +1,6 @@
 using System;
 
-namespace College.WebAPI
+namespace College.Core.Entities
 {
     public class WeatherForecast
     {

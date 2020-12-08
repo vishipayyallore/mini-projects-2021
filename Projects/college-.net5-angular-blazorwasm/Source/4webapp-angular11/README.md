@@ -1,4 +1,4 @@
-# Conferences (MEAN Stack application)
+# College Web (Full Stack Application)
 
 ## Tech Stack
 > 1. Angular (version **11.0.3**).
@@ -19,15 +19,7 @@ firebase deploy --only hosting:conferences-29nov2020
 ng update @angular/cli @angular/core
 ```
 
------------------------
-
-## Application Look and Feel 
-
-![Web APP Dashboard|150x150](./documentation/images/Angular_UI_Dashboard.PNG)
-
------------------------
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
 
 ## Development server
 

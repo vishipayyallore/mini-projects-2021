@@ -14,4 +14,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\1Common\College.BLL\College.BLL.csproj" />
+    <ProjectReference Include="..\..\1Common\College.Core\College.Core.csproj" />
+    <ProjectReference Include="..\..\1Common\College.RedisCache.DAL\College.RedisCache.DAL.csproj" />
+    <ProjectReference Include="..\..\1Common\College.SQLServer.DAL\College.SQLServer.DAL.csproj" />
+  </ItemGroup>
+
 </Project>
