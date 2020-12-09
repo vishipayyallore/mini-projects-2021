@@ -6,6 +6,9 @@ import { PageNotfoundComponent } from './components/shared/page-notfound/page-no
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'posts', component: DashboardComponent },
+  { path: 'categories', component: DashboardComponent },
+  { path: 'users', component: DashboardComponent },
   { path: 'pagenotfound', component: PageNotfoundComponent },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: '**', redirectTo: 'pagenotfound', pathMatch: 'full' },
