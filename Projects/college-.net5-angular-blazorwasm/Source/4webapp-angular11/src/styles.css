@@ -9,6 +9,7 @@
   transition: 0.5s;
 }
 
+
 .top-navbar-color {
   background: #201C17;
   color: white;
@@ -71,6 +72,8 @@ footer {
   color:#201C17;
 }
 
+/*
 a:hover{
   color: greenyellow!important;
 }
+*/
