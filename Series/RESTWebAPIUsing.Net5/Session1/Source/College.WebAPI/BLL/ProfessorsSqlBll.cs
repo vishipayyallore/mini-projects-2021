@@ -16,6 +16,7 @@ namespace College.WebAPI.BLL
         public ProfessorsSqlBll(ProfessorsSqlDal professorsSqlDal, ILogger<ProfessorsSqlBll> logger)
         {
             _professorsSqlDal = professorsSqlDal ?? throw new ArgumentNullException(nameof(professorsSqlDal));
+            
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 

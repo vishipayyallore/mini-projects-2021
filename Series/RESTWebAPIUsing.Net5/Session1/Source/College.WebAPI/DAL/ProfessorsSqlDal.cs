@@ -44,7 +44,8 @@ namespace College.WebAPI.DAL
 
             professors = await _collegeSqlDbContext.Professors
                                 .Include(student => student.Students)
-                                .ToListAsync();
+                                .ToListAsync()
+                                .ConfigureAwait(false);
 
             _logger.Log(LogLevel.Debug, "Returning the results from ProfessorsSqlDal::GetAllProfessors");
 
@@ -60,7 +61,8 @@ namespace College.WebAPI.DAL
             professor = await _collegeSqlDbContext.Professors
                                 .Where(record => record.ProfessorId == professorId)
                                 .Include(student => student.Students)
-                                .FirstOrDefaultAsync();
+                                .FirstOrDefaultAsync()
+                                .ConfigureAwait(false);
 
             _logger.Log(LogLevel.Debug, "Returning the results from ProfessorsSqlDal::GetProfessorById");
 
@@ -78,7 +80,8 @@ namespace College.WebAPI.DAL
 
             var retrievedProfessor = await _collegeSqlDbContext.Professors
                                             .Where(record => record.ProfessorId == professor.ProfessorId)
-                                            .FirstOrDefaultAsync();
+                                            .FirstOrDefaultAsync()
+                                            .ConfigureAwait(false);
 
             retrievedProfessor.Name = professor.Name;
             retrievedProfessor.Salary = professor.Salary;
@@ -104,11 +107,13 @@ namespace College.WebAPI.DAL
 
             var retrievedProfessor = await _collegeSqlDbContext.Professors
                                             .Where(record => record.ProfessorId == professorId)
-                                            .FirstOrDefaultAsync();
+                                            .FirstOrDefaultAsync()
+                                            .ConfigureAwait(false);
 
             _collegeSqlDbContext.Professors.Remove(retrievedProfessor);
 
-            await _collegeSqlDbContext.SaveChangesAsync();
+            await _collegeSqlDbContext.SaveChangesAsync()
+                    .ConfigureAwait(false);
 
             _logger.Log(LogLevel.Debug, "Returning the results from ProfessorsSqlDal::DeleteProfessorById");
 
