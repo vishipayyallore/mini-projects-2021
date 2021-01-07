@@ -24,7 +24,7 @@ import { IProfessor } from '../interfaces/IProfessor';
     `,
     `
     .first-div {
-      background-color: #e0e4e6;
+      background-color: #daebf5;
     }
     `,
     `
