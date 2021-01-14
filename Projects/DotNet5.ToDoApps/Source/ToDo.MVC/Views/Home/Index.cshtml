@@ -1,9 +1,58 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    ViewBag.Menu = "Home Page";
+    ViewBag.SelectedMenu = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+
+    <div class="row mb-4">
+        <div class="col-sm-6">
+            <div class="card shadow text-black">
+                <div class="card-header p-0">
+                    <h5 class="card-title m-2">University</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">College Professors Module. View, Edit and Delete Professors. The backend is .Net Core 3.1 with EF Core and SQL Server.</p>
+                    <a href="#" [routerLink]="['/professors']" class="btn btn-maincolor shadow">Professors</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card shadow text-black bg-light">
+                <div class="card-header p-0">
+                    <h5 class="card-title m-2">Library</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Library Books Module. Add, View, Edit and Delete Books. The backend is Node JS + Express. It using Mongo Db for data store.</p>
+                    <a href="#" class="btn btn-maincolor shadow">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-sm-6">
+            <div class="card shadow text-black bg-light">
+                <div class="card-header p-0">
+                    <h5 class="card-title m-2">Trading</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Retrieving the Stock Price. Add, View, Edit and Delete Books. The backend is Node JS + Express. It using Mongo Db for data store</p>
+                    <a href="#" class="btn btn-maincolor shadow">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card shadow text-black bg-light">
+                <div class="card-header p-0">
+                    <h5 class="card-title m-2">College</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Retrieving the Students. Add, View, Edit and Delete Books. The backend is Node JS + Express. It using Mongo Db for data store</p>
+                    <a href="#" class="btn btn-maincolor shadow">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

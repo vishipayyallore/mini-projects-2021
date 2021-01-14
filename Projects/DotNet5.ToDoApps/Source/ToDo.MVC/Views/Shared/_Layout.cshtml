@@ -8,34 +8,13 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    @*<header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow">
-                <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ToDo MVC</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>*@
-    <nav class="nav-area">
+    <nav class="topnav-bar">
         <div class="container clearfix">
             <div class="float-left">
                 <ul class="nav">
-                    <li class='nav-item'><a class='nav-link navbar-brand @(ViewBag.Menu == "ToDo MVC" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Index">ToDo MVC</a></li>
-                    <li class='nav-item'><a class='nav-link @(ViewBag.Menu == "Home Page" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li class='nav-item'><a class='nav-link @(ViewBag.Menu == "Privacy Policy" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                    <li class='nav-item'><a class='nav-link navbar-brand @(ViewBag.SelectedMenu == "ToDo MVC" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Index">ToDo MVC</a></li>
+                    <li class='nav-item'><a class='nav-link @(ViewBag.SelectedMenu == "Home Page" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class='nav-item'><a class='nav-link @(ViewBag.SelectedMenu == "Privacy Policy" ? "active" : "")' asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +22,6 @@
     
     <div class="container">
         <main role="main" class="pb-3">
-    <span>Menu Selected: @ViewBag.Menu</span>
             @RenderBody()
         </main>
     </div>
