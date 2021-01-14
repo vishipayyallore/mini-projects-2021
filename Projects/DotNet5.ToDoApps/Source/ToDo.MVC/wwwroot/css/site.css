@@ -31,7 +31,6 @@ a.navbar-brand {
 	color: white;
 	font-weight: normal;
 	height: 38px;
-	padding-top: 10px;
 	background: #21343d;
 }
 
@@ -47,7 +46,7 @@ a {
 }
 
 a:hover {
-	color: greenyellow!Important;
+	color: greenyellow !important;
 }
 
 .btn-maincolor {
@@ -71,6 +70,11 @@ a:hover {
 .card-header {
 	background: #6fabc7;
 }
+
+.card-body {
+	background: #eaf1f5;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
