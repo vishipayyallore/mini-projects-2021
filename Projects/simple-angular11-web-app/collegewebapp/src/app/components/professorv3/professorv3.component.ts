@@ -14,9 +14,9 @@ export class ProfessorV3Component implements OnInit {
   constructor() {
     this.professor = {
       professorId: 3,
-      name: 'Hafeez',
+      name: '<script>alert("Hello");</script>Hafeez',
       dateOfJoin: new Date(),
-      salary: 1234.56,
+      salary: 1234.5678,
       isPhd: true
     };
   }
