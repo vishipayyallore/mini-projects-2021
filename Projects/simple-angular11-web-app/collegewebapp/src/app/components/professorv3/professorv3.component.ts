@@ -19,7 +19,8 @@ export class ProfessorV3Component implements OnInit {
       name: 'Shiva',
       dateOfJoin: new Date(),
       salary: 1234.5678,
-      isPhd: true
+      isPhd: true,
+      teaches: 'C Sharp'
     };
   }
 

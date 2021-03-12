@@ -17,21 +17,24 @@ export class ProfessorsListComponent implements OnInit {
         name: 'Shiva',
         dateOfJoin: new Date(),
         salary: 4567.5678,
-        isPhd: true
+        isPhd: true,
+        teaches: 'C#'
       },
       {
         professorId: 2,
         name: 'Mathews',
         dateOfJoin: new Date(),
         salary: 1111.5678,
-        isPhd: true
+        isPhd: true,
+        teaches: 'Java'
       },
       {
         professorId: 3,
         name: 'Hafeez',
         dateOfJoin: new Date(),
         salary: 2222.5678,
-        isPhd: true
+        isPhd: true,
+        teaches: 'Node JS'
       }
     ];
   }
