@@ -5,7 +5,7 @@ import { IProfessor } from "../interfaces/IProfessor";
 @Component({
   selector: 'app-professorv1',
   template: `
-                <div class="container rounded shadow first-div py-2">
+                <div class="container rounded shadow div-backgroudcolor py-2">
                 <h1>Professor {{professor.name}} (V1)</h1>
                 <hr>
                 <div>
@@ -23,7 +23,7 @@ import { IProfessor } from "../interfaces/IProfessor";
         }
         `,
     `
-        .first-div {
+        .div-backgroudcolor {
           background-color: #c1d3f3;
         }
         `,

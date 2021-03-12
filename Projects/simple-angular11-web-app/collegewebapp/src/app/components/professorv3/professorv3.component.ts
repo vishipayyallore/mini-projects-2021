@@ -11,10 +11,12 @@ export class ProfessorV3Component implements OnInit {
 
   professor: IProfessor;
 
+  // name: '<script>alert("Hello");</script>Hafeez',
+
   constructor() {
     this.professor = {
       professorId: 3,
-      name: '<script>alert("Hello");</script>Hafeez',
+      name: 'Shiva',
       dateOfJoin: new Date(),
       salary: 1234.5678,
       isPhd: true

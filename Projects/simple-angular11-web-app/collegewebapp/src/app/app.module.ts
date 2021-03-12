@@ -4,17 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
 import { ProfessorV3Component } from './components/professorv3/professorv3.component';
-import { ProfessorComponent } from './components/professor/professor.component';
+import { EmployeeComponent } from './components/employee/employee.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { ProfessorsListComponent } from './components/professors-list/professors-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfessorV3Component,
     TopNavbarComponent,
-    ProfessorComponent
+    EmployeeComponent,
+    LoginComponent,
+    ProfessorsListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
