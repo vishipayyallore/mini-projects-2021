@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { IEmployee } from 'src/app/interfaces/iemployee';
+
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
@@ -9,7 +11,7 @@ export class EmployeeComponent implements OnInit {
 
   cardTitle: string = 'Employee Details';
   showPicture: boolean;
-  employee: any;
+  employee: IEmployee;
 
   constructor() {
     this.showPicture = true;
@@ -19,7 +21,7 @@ export class EmployeeComponent implements OnInit {
 
     this.employee = {
       fullName: 'Shiva Sai',
-      image: 'http://lorempixel.com/400/200/sports/2/',
+      pictureUrl: 'http://lorempixel.com/400/200/sports/2/',
       department: 'Software',
       age: 25,
       address: {
