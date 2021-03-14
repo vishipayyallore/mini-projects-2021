@@ -11,6 +11,7 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
+// Requires gRPC-Go v1.32.0 or later.
 const _ = grpc.SupportPackageIsVersion7
 
 // CalculationServiceClient is the client API for CalculationService service.
@@ -63,8 +64,8 @@ type UnsafeCalculationServiceServer interface {
 	mustEmbedUnimplementedCalculationServiceServer()
 }
 
-func RegisterCalculationServiceServer(s *grpc.Server, srv CalculationServiceServer) {
-	s.RegisterService(&_CalculationService_serviceDesc, srv)
+func RegisterCalculationServiceServer(s grpc.ServiceRegistrar, srv CalculationServiceServer) {
+	s.RegisterService(&CalculationService_ServiceDesc, srv)
 }
 
 func _CalculationService_AddNumbers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -85,7 +86,10 @@ func _CalculationService_AddNumbers_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
-var _CalculationService_serviceDesc = grpc.ServiceDesc{
+// CalculationService_ServiceDesc is the grpc.ServiceDesc for CalculationService service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var CalculationService_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "calculationpb.CalculationService",
 	HandlerType: (*CalculationServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
