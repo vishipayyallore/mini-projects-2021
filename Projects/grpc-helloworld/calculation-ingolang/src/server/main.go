@@ -6,7 +6,7 @@ import (
 	"net"
 
 	"google.golang.org/grpc"
-	pb "calculationpb"
+	pb "google.golang.org/grpc/examples/calculation-ingolang/src/protos/calculationpb"
 )
 
 const (
@@ -21,7 +21,7 @@ type server struct {
 // AddNumbers implements calculationpb.CalculationService
 func (s *server) AddNumbers(ctx context.Context, in *pb.AddRequest) (*pb.AddResponse, error) {
 	log.Printf("Received: %v %v", in.GetValue1(), in.GetValue2())
-	return &pb.AddResponse{Sum: (in.GetValue1() + in.GetValue2()) }, nil
+	return &pb.AddResponse{Sum: (in.GetValue1() + in.GetValue2())}, nil
 }
 
 func main() {
