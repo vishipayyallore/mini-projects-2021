@@ -16,4 +16,10 @@ Execute the below mentioned command inside the **Protos** folder
 protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative calculations.proto
 ```
 
+```
+go mod init google.golang.org/grpc/examples/calculation-ingolang/src
+```
 
+```
+go mod tidy
+```

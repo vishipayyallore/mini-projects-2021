@@ -6,11 +6,11 @@ import (
 	"time"
 
 	"google.golang.org/grpc"
-	pb "calculationpb"
+	pb "google.golang.org/grpc/examples/calculation-ingolang/src/protos"
 )
 
 const (
-	address     = "localhost:50051"
+	address = "localhost:50051"
 )
 
 func main() {
@@ -27,10 +27,10 @@ func main() {
 	var number1 int32 = 1001
 	var number2 int32 = 2002
 	/*
-	if len(os.Args) > 2 {
-		number1, err := strconv.Atoi(os.Args[1])
-		number2, err := strconv.Atoi(os.Args[2])
-	}
+		if len(os.Args) > 2 {
+			number1, err := strconv.Atoi(os.Args[1])
+			number2, err := strconv.Atoi(os.Args[2])
+		}
 	*/
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
