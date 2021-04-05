@@ -24,7 +24,7 @@ export class EmployeeComponent implements OnInit {
 
     this.employee = {
       fullName: 'Shiva Sai',
-      pictureUrl: 'http://lorempixel.com/400/200/sports/2/',
+      pictureUrl: 'assets/images/Emp1.png',
       department: 'Software',
       age: 25,
       address: {

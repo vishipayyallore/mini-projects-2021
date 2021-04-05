@@ -1,4 +1,4 @@
-<div class="card shadow text-black bg-light">
+<!-- <div class="card shadow text-black bg-light">
   <div class="card-header card-header">
     <h2>{{cardTitle}}</h2>
   </div>
@@ -9,7 +9,6 @@
           {{showPicture ? 'Hide' : 'Show'}} Picture
         </button>
         <img *ngIf="showPicture" [src]="employee.pictureUrl" >
-        <!-- <img *ngIf="showPicture" src="{{employee.pictureUrl}}"> -->
       </div>
       <div class="col-sm-8 px-0 py-0">
         <p>Name: <span>{{ employee.fullName }}</span></p>
@@ -20,4 +19,61 @@
       </div>
     </div>
   </div>
+</div> -->
+<!-- <img *ngIf="showPicture" src="{{employee.pictureUrl}}"> -->
+<div class="container row col-sm-12 ml-0 py-2">
+  <div class="div-container row col-sm-4">
+    <div class="col-sm-12">
+      <h1>{{cardTitle}}</h1>
+    </div>
+    <div class="col-sm-4">
+      <button class="btn btn-primary btn-sm ml-4 mb-1" (click)='togglePicture()'>
+        {{showPicture ? 'Hide' : 'Show'}} Picture
+      </button>
+      <img *ngIf="showPicture" [src]="employee.pictureUrl" width="150px" height="150px">
+    </div>
+    <div class="col-sm-8">
+      <p>Name: <span>{{ employee.fullName }}</span></p>
+      <p>Age: <span>{{ employee.age }}</span></p>
+      <p>Department: <span>{{ employee.department }}</span></p>
+      <p>Address: <span>{{ employee.address.street }} {{ employee.address.city }}</span>
+      </p>
+    </div>
+  </div>
+  <div class="div-container row col-sm-4">
+    <div class="col-sm-12">
+      <h1>{{cardTitle}}</h1>
+    </div>
+    <div class="col-sm-4">
+      <button class="btn btn-primary btn-sm ml-4 mb-1" (click)='togglePicture()'>
+        {{showPicture ? 'Hide' : 'Show'}} Picture
+      </button>
+      <img *ngIf="showPicture" [src]="employee.pictureUrl" width="150px" height="150px">
+    </div>
+    <div class="col-sm-8">
+      <p>Name: <span>{{ employee.fullName }}</span></p>
+      <p>Age: <span>{{ employee.age }}</span></p>
+      <p>Department: <span>{{ employee.department }}</span></p>
+      <p>Address: <span>{{ employee.address.street }} {{ employee.address.city }}</span>
+      </p>
+    </div>
+  </div>
+  <!-- <div class="div-container row col-sm-4">
+    <div class="col-sm-12">
+      <h1>{{cardTitle}}</h1>
+    </div>
+    <div class="col-sm-4">
+      <button class="btn btn-primary btn-sm ml-4 mb-1" (click)='togglePicture()'>
+        {{showPicture ? 'Hide' : 'Show'}} Picture
+      </button>
+      <img *ngIf="showPicture" [src]="employee.pictureUrl" width="150px" height="150px">
+    </div>
+    <div class="col-sm-8">
+      <p>Name: <span>{{ employee.fullName }}</span></p>
+      <p>Age: <span>{{ employee.age }}</span></p>
+      <p>Department: <span>{{ employee.department }}</span></p>
+      <p>Address: <span>{{ employee.address.street }} {{ employee.address.city }}</span>
+      </p>
+    </div>
+  </div> -->
 </div>
