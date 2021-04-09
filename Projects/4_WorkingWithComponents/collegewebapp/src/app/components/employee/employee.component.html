@@ -1,52 +1,14 @@
 <div class="row justify-content-between">
-  <div class="div-container row col-sm-4 py-4 px-0 ml-0">
+
+  <div class="div-container row col-sm-4 py-4 px-0 ml-0" *ngFor="let employee of employeesList">
     <div class="col-sm-12">
-      <h1>{{cardTitle}}</h1>
+      <h1>{{employee.fullName}}</h1>
     </div>
     <div class="col-sm-4">
-      <button class="btn btn-primary btn-sm ml-4 mb-1" (click)='togglePicture()'>
-        {{showPicture ? 'Hide' : 'Show'}} Picture
-      </button>
       <img *ngIf="showPicture" [src]="employee.pictureUrl" width="150px" height="150px">
     </div>
     <div class="col-sm-8">
-      <p>Name: <span>{{ employee.fullName }}</span></p>
-      <p>Age: <span>{{ employee.age }}</span></p>
-      <p>Department: <span>{{ employee.department }}</span></p>
-      <p>Address: <span>{{ employee.address.street }} {{ employee.address.city }}</span>
-      </p>
-    </div>
-  </div>
-  <div class="div-container row col-sm-4 py-4 px-0 ml-0">
-    <div class="col-sm-12">
-      <h1>{{cardTitle}}</h1>
-    </div>
-    <div class="col-sm-4">
-      <button class="btn btn-primary btn-sm ml-4 mb-1" (click)='togglePicture()'>
-        {{showPicture ? 'Hide' : 'Show'}} Picture
-      </button>
-      <img *ngIf="showPicture" [src]="employee.pictureUrl" width="150px" height="150px">
-    </div>
-    <div class="col-sm-8">
-      <p>Name: <span>{{ employee.fullName }}</span></p>
-      <p>Age: <span>{{ employee.age }}</span></p>
-      <p>Department: <span>{{ employee.department }}</span></p>
-      <p>Address: <span>{{ employee.address.street }} {{ employee.address.city }}</span>
-      </p>
-    </div>
-  </div>
-  <div class="div-container row col-sm-4 py-4 px-0 ml-0">
-    <div class="col-sm-12">
-      <h1>{{cardTitle}}</h1>
-    </div>
-    <div class="col-sm-4">
-      <button class="btn btn-primary btn-sm ml-4 mb-1" (click)='togglePicture()'>
-        {{showPicture ? 'Hide' : 'Show'}} Picture
-      </button>
-      <img *ngIf="showPicture" [src]="employee.pictureUrl" width="150px" height="150px">
-    </div>
-    <div class="col-sm-8">
-      <p>Name: <span>{{ employee.fullName }}</span></p>
+      <p>Id: <span>{{ employee.id }}</span></p>
       <p>Age: <span>{{ employee.age }}</span></p>
       <p>Department: <span>{{ employee.department }}</span></p>
       <p>Address: <span>{{ employee.address.street }} {{ employee.address.city }}</span>
@@ -54,3 +16,59 @@
     </div>
   </div>
 </div>
+<!-- <div class="row justify-content-between">
+  <div class="div-container row col-sm-4 py-4 px-0 ml-0">
+    <div class="col-sm-12">
+      <h1>{{cardTitle}}</h1>
+    </div>
+    <div class="col-sm-4">
+      <button class="btn btn-primary btn-sm ml-4 mb-1" (click)='togglePicture()'>
+        {{showPicture ? 'Hide' : 'Show'}} Picture
+      </button>
+      <img *ngIf="showPicture" [src]="employee.pictureUrl" width="150px" height="150px">
+    </div>
+    <div class="col-sm-8">
+      <p>Name: <span>{{ employee.fullName }}</span></p>
+      <p>Age: <span>{{ employee.age }}</span></p>
+      <p>Department: <span>{{ employee.department }}</span></p>
+      <p>Address: <span>{{ employee.address.street }} {{ employee.address.city }}</span>
+      </p>
+    </div>
+  </div>
+  <div class="div-container row col-sm-4 py-4 px-0 ml-0">
+    <div class="col-sm-12">
+      <h1>{{cardTitle}}</h1>
+    </div>
+    <div class="col-sm-4">
+      <button class="btn btn-primary btn-sm ml-4 mb-1" (click)='togglePicture()'>
+        {{showPicture ? 'Hide' : 'Show'}} Picture
+      </button>
+      <img *ngIf="showPicture" [src]="employee.pictureUrl" width="150px" height="150px">
+    </div>
+    <div class="col-sm-8">
+      <p>Name: <span>{{ employee.fullName }}</span></p>
+      <p>Age: <span>{{ employee.age }}</span></p>
+      <p>Department: <span>{{ employee.department }}</span></p>
+      <p>Address: <span>{{ employee.address.street }} {{ employee.address.city }}</span>
+      </p>
+    </div>
+  </div>
+  <div class="div-container row col-sm-4 py-4 px-0 ml-0">
+    <div class="col-sm-12">
+      <h1>{{cardTitle}}</h1>
+    </div>
+    <div class="col-sm-4">
+      <button class="btn btn-primary btn-sm ml-4 mb-1" (click)='togglePicture()'>
+        {{showPicture ? 'Hide' : 'Show'}} Picture
+      </button>
+      <img *ngIf="showPicture" [src]="employee.pictureUrl" width="150px" height="150px">
+    </div>
+    <div class="col-sm-8">
+      <p>Name: <span>{{ employee.fullName }}</span></p>
+      <p>Age: <span>{{ employee.age }}</span></p>
+      <p>Department: <span>{{ employee.department }}</span></p>
+      <p>Address: <span>{{ employee.address.street }} {{ employee.address.city }}</span>
+      </p>
+    </div>
+  </div>
+</div> -->
