@@ -1,10 +1,8 @@
 <app-top-navbar></app-top-navbar>
 
-<div class="container row col-sm-12 ml-0 py-2">
-    
-</div>
-
 <div class="container row col-sm-12">
+    <app-rating [numberOfStars]="5" [currentRating]="4.8" (ratingClicked)="onRatingClicked($event)"></app-rating>
+
     <app-employee class="col-sm-12 ml-1 mb-4"></app-employee>
     
     <app-professors-list class="col-sm-8"></app-professors-list>

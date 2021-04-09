@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'College Web App';
+
+  onRatingClicked(currentRating: number): void{
+    console.log(`Current Selected Rating: ${currentRating}`);
+  }
+
 }

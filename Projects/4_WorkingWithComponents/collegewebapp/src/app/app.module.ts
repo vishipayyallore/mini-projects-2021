@@ -9,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ProfessorsListComponent } from './components/professors-list/professors-list.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { RatingComponent } from './components/shared/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     EmployeeComponent,
     LoginComponent,
     ProfessorsListComponent,
-    FooterComponent
+    FooterComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

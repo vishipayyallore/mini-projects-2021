@@ -27,7 +27,7 @@ export class EmployeeComponent implements OnInit {
     this.employeesList = [
       {
         id: 'A101',
-        fullName: 'Shiva Sai',
+        fullName: 'Mithun Nair',
         pictureUrl: 'assets/images/Emp1.png',
         department: 'Software',
         age: 25,
@@ -40,7 +40,7 @@ export class EmployeeComponent implements OnInit {
       },
       {
         id: 'A102',
-        fullName: 'Mathew Philips',
+        fullName: 'George Reddy',
         pictureUrl: 'assets/images/Emp2.png',
         department: 'Hardward',
         age: 25,
