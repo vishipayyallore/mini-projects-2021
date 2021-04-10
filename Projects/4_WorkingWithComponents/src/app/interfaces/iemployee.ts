@@ -13,4 +13,6 @@ export interface IEmployee {
   age: number;
 
   address: IAddress;
+
+  rating?: number;
 }

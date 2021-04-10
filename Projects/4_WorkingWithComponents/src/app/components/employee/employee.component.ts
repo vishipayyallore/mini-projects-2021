@@ -17,7 +17,6 @@ export class EmployeeComponent implements OnInit {
 
   constructor() {
 
-    // this.cardTitle = 125;
     this.cardTitle = 'Employee Details';
     this.showPicture = true;
   }
@@ -35,8 +34,8 @@ export class EmployeeComponent implements OnInit {
           street: 'Safilguda',
           city: 'Hyderabad',
           state: 'Telangana'
-        }
-  
+        },
+        rating: 4.2
       },
       {
         id: 'A102',
@@ -48,8 +47,8 @@ export class EmployeeComponent implements OnInit {
           street: 'Safilguda',
           city: 'Hyderabad',
           state: 'Telangana'
-        }
-  
+        },
+        rating: 4.7
       },
       {
         id: 'A103',
@@ -61,24 +60,11 @@ export class EmployeeComponent implements OnInit {
           street: 'Safilguda',
           city: 'Hyderabad',
           state: 'Telangana'
-        }
-  
+        },
+        rating: 3.4
       }
     ];
 
-    this.employee = {
-      id: 'A101',
-      fullName: 'Shiva Sai',
-      pictureUrl: 'assets/images/Emp1.png',
-      department: 'Software',
-      age: 25,
-      address: {
-        street: 'Safilguda',
-        city: 'Hyderabad',
-        state: 'Telangana'
-      }
-
-    };
   }
 
   togglePicture(): void{
@@ -86,6 +72,10 @@ export class EmployeeComponent implements OnInit {
     console.log(this.showPicture ? 'Hiding the picture' : 'Showing the picture');
 
     this.showPicture = !this.showPicture;
+  }
+
+  onRatingClicked(currentRating: number): void{
+    console.log(`Current Selected Rating: ${currentRating}`);
   }
 
 }
