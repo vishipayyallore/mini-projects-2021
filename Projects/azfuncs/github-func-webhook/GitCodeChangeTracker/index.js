@@ -27,7 +27,6 @@ module.exports = async function (context, req) {
 
         // Writing to Table
         context.bindings.tableBinding.push(dataToBeStored);
-
     }
 
     context.res = (inputs) ? {

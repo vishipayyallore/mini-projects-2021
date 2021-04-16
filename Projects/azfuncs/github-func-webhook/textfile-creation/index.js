@@ -8,7 +8,8 @@ module.exports = async function (context, textfiles) {
         PartitionKey: 'TextFiles',
         RowKey: uuidv4(),
         FullName: context.bindingData.blobTrigger,
-        FileSize: textfiles.length
+        FileSize: textfiles.length,
+        FileContents: textfiles.toString()
     });
 };
 
