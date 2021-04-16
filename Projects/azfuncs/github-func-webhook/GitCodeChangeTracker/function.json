@@ -21,6 +21,13 @@
       "name": "tableBinding",
       "type": "table",
       "direction": "out"
+    },
+    {
+      "name": "textfiles",
+      "type": "blob",
+      "path": "samples-workitems/{after}.json",
+      "connection": "TableStorageConnectionAppSetting",
+      "direction": "out"
     }
   ]
 }

@@ -5,19 +5,29 @@ module.exports = async function (context, req) {
     const gitHubNotification = req.body;
 
     if (inputs) {
+        // Writing in Table Storage
         context.bindings.tableBinding = [];
 
-        context.bindings.tableBinding.push({
+        const uniqueId = context.bindingData.after; // uuidv4();
+        const dataToBeStored = {
             PartitionKey: gitHubNotification.repository.owner.name,
-            RowKey: uuidv4(),
+            RowKey: uniqueId,
             FullName: gitHubNotification.repository.full_name,
             OwnerName: gitHubNotification.repository.owner.name,
             RepoUrl: gitHubNotification.repository.html_url,
             AuthorName: gitHubNotification.commits[0].author.name,
             Added: gitHubNotification.commits[0].added,
             Removed: gitHubNotification.commits[0].removed,
-            Modified: gitHubNotification.commits[0].modified
-        });
+            Modified: gitHubNotification.commits[0].modified,
+            blobName: uniqueId
+        };
+
+        // Writing to Blob
+        context.bindings.textfiles = dataToBeStored;
+
+        // Writing to Table
+        context.bindings.tableBinding.push(dataToBeStored);
+
     }
 
     context.res = (inputs) ? {

@@ -1,6 +1,7 @@
 module.exports = async function (context, textfiles) {
     context.log("JavaScript blob trigger function processed blob \n Blob:", context.bindingData.blobTrigger, "\n Blob Size:", textfiles.length, "Bytes");
 
+    // Writing in Table Storage
     context.bindings.tableBinding = [];
     
     context.bindings.tableBinding.push({
