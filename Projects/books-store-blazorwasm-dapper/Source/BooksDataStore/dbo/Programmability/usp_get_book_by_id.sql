@@ -7,7 +7,7 @@ BEGIN
 
 	SELECT
 		Id, PictureUrl, Title, Author, IsActive, ISBN, Pages
-	From
+	FROM
 		Books
 	WHERE
 		Id = @Id;

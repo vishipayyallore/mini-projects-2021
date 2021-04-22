@@ -63,8 +63,9 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Books.sql" />
     <Build Include="dbo\Programmability\usp_add_book.sql" />
-    <Build Include="dbo\Programmability\Copy of usp_add_book.sql" />
+    <Build Include="dbo\Programmability\usp_delete_book_by_id.sql" />
     <Build Include="dbo\Programmability\usp_get_book_by_id.sql" />
     <Build Include="dbo\Programmability\usp_get_all_books.sql" />
+    <Build Include="dbo\Programmability\usp_update_book_by_id.sql" />
   </ItemGroup>
 </Project>
