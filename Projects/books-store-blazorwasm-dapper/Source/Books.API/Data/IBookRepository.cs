@@ -7,16 +7,15 @@ namespace Books.API.Data
 
     public interface IBookRepository
     {
-        //Task<bool> AddVideo(Video video);
+        Task<bool> AddBook(Book video);
 
         Task<IEnumerable<Book>> GetAllBooks();
 
-        //Task<Video> GetVideoById(int Id);
+        Task<Book> GetBookById(int id);
 
-        //Task<bool> UpdateVideo(Video video);
+        //Task<bool> UpdateBook(Book video);
 
-        //Task<bool> DeleteVideo(int id);
-
+        //Task<bool> DeleteBook(int id);
     }
 
 }
