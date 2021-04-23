@@ -1,6 +1,7 @@
 ﻿using Books.Data;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
@@ -22,6 +23,12 @@ namespace Books.Web.Services
             return await _httpClient.GetFromJsonAsync<IEnumerable<Book>>($"{booksEndPoint}");
         }
 
+        public async Task<bool> AddBook(Book book)
+        {
+            var result = await _httpClient.PostAsJsonAsync($"{booksEndPoint}", book);
+
+            return (result.StatusCode == HttpStatusCode.OK);
+        }
     }
 
 }
