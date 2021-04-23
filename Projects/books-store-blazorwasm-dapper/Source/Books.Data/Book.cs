@@ -5,7 +5,7 @@
     {
         public int Id { get; set; }
 
-        public string PictureUr { get; set; }
+        public string PictureUrl { get; set; }
 
         public string Title { get; set; }
 

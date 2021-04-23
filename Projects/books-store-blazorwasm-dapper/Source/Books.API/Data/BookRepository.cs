@@ -23,7 +23,7 @@ namespace Books.API.Data
             using (var conn = new SqlConnection(_configuration.SqlServerConnection))
             {
                 var parameters = new DynamicParameters();
-                parameters.Add("PictureUrl", book.PictureUr, DbType.String);
+                parameters.Add("PictureUrl", book.PictureUrl, DbType.String);
                 parameters.Add("Title", book.Title, DbType.String);
                 parameters.Add("Author", book.Author, DbType.String);
                 parameters.Add("IsActive", book.IsActive, DbType.Boolean);
