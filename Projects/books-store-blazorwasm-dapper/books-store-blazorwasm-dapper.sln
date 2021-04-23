@@ -16,11 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8BD7DC78
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BooksDataStore", "Source\BooksDataStore\BooksDataStore.sqlproj", "{6C829F3B-3FA2-45CB-BAD8-7154F7701608}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.API", "Source\Books.API\Books.API.csproj", "{08F0A869-ABD6-4744-9689-021FA9E561B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books.API", "Source\Books.API\Books.API.csproj", "{08F0A869-ABD6-4744-9689-021FA9E561B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.Web", "Source\Books.Web\Books.Web.csproj", "{3A952E4B-4809-4F08-AA49-3EF27C9F92D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books.Web", "Source\Books.Web\Books.Web.csproj", "{3A952E4B-4809-4F08-AA49-3EF27C9F92D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.Data", "Source\Books.Data\Books.Data.csproj", "{868A9321-7D7E-4EE9-9BE2-FFFBFB9A8742}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books.Data", "Source\Books.Data\Books.Data.csproj", "{868A9321-7D7E-4EE9-9BE2-FFFBFB9A8742}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
