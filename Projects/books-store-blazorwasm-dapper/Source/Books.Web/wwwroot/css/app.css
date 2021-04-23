@@ -63,7 +63,7 @@ img {
     height: 60px;
     right: 40px;
     top: 38px;
-    background-color: #2F5C8E;
+    background-color: #376a9c;
     color: #fff;
     border-radius: 50px;
     text-align: center;
@@ -75,7 +75,7 @@ img {
 }
 
 .table-header-dark {
-    background-color: #2F5C8E;
+    background-color: #376a9c;
     color: white !important;
 }
 
