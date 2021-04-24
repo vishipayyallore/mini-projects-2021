@@ -10,6 +10,8 @@ namespace Books.API
 {
     public class Startup
     {
+        const string _corsPolicyName = "AllHosts";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -22,7 +24,7 @@ namespace Books.API
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("Open", builder => builder.AllowAnyOrigin()
+                options.AddPolicy(_corsPolicyName, builder => builder.AllowAnyOrigin()
                                                             .AllowAnyHeader()
                                                              .AllowAnyMethod());
             });
@@ -57,7 +59,7 @@ namespace Books.API
 
             app.UseAuthorization();
 
-            app.UseCors("Open");
+            app.UseCors(_corsPolicyName);
 
             app.UseEndpoints(endpoints =>
             {

@@ -27,6 +27,11 @@ namespace Books.Web.Pages
             NavigationManager.NavigateTo("bookslist");
         }
 
+        protected async Task Home()
+        {
+            NavigationManager.NavigateTo("bookslist");
+        }
+
     }
 
 }
