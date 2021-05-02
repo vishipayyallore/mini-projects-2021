@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError, from } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
-import { ProfessorDto, ProfessorsGrpcDto } from '../interfaces/professor-dto';
+import { ProfessorsGrpcDto } from '../interfaces/professor-dto';
 import { environment } from 'src/environments/environment';
 
 import { CollegeSvcClient, ServiceError } from '../proto/college_pb_service';
@@ -11,18 +9,9 @@ import { AllProfessorsResonse } from '../proto/college_pb';
 import { Empty } from 'google-protobuf/google/protobuf/empty_pb';
 import { BrowserHeaders } from 'browser-headers';
 
-const baseUrl = 'https://localhost:5002/api/v1';
-const apiName = 'professors';
-const httpOptions = {
-    headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-    }),
-};
-
 const headers = new BrowserHeaders({
     "content-type": "application/json"
 });
-
 
 @Injectable({
     providedIn: 'root',
@@ -31,10 +20,9 @@ export class ProfessorsGrpcserviceService {
 
     gRpcClient: CollegeSvcClient;
 
-    constructor(private httpClient: HttpClient) {
+    constructor() {
         this.gRpcClient = new CollegeSvcClient(environment.gRPCUrl);
     }
-
 
     GetAllProfessorsFromgRPC(): Promise<object> {
 

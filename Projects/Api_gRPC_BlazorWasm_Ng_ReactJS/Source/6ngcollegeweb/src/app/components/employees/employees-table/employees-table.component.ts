@@ -12,7 +12,9 @@ import { ProfessorsGrpcserviceService } from 'src/app/services/professors-grpcse
 export class EmployeesTableComponent implements OnInit {
 
     professorsList: ProfessorDto[] = [];
-
+    imageWidth = 50;
+    imageMargin = 1;
+    
     constructor(private professorsGrpcserviceService: ProfessorsGrpcserviceService) {
     }
 

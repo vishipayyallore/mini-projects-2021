@@ -14,7 +14,7 @@ export interface ProfessorDto {
 
   isphd: boolean;
 
-  pictureUrl: string;
+  pictureurl: string;
 }
 
 export interface ProfessorDtoApi {

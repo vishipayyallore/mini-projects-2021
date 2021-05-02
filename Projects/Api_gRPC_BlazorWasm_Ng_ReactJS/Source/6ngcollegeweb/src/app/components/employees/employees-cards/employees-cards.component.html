@@ -1,16 +1,16 @@
-<div class="row justify-content-between px-0">
-    <div class="div-container row col-sm-4 px-0 ml-0" *ngFor="let employee of employeesList">
+<div class="container col-sm-12 row justify-content-between py-4 mx-0 my-1" >
+    <div class="div-container row col-sm-4" *ngFor="let employee of employeesList">
         <div class="col-sm-12">
             <h3>{{employee.name}}</h3>
         </div>
         <div class="col-sm-4">
-            <img src="assets/{{employee.pictureUrl}}" width="150px" height="150px">
+            <img src="assets{{employee.pictureUrl}}" width="150px" height="150px">
         </div>
-        <div class="col-sm-8 py-0">
-            <p>Is Phd: <span>{{ employee.isPhd }}</span></p>
-            <p>DOJ: <span>{{ employee.doj | date }}</span></p>
-            <p>Teaches: <span>{{ employee.teaches }}</span></p>
-            <p>Salary: <span>{{ employee.salary | currency }}</span></p>
+        <div class="col-sm-8 py-0 mx-0">
+            <p class="ml-2">Is Phd: <span>{{ employee.isPhd }}</span></p>
+            <p class="ml-2">DOJ: <span>{{ employee.doj | date }}</span></p>
+            <p class="ml-2">Teaches: <span>{{ employee.teaches }}</span></p>
+            <p class="ml-2">Salary: <span>{{ employee.salary | currency }}</span></p>
         </div>
         <div class="col-sm-4">
         </div>

@@ -30,7 +30,7 @@ namespace College.GrpcServer.Services
 
         public override async Task<AllProfessorsResonse> GetAllProfessors(Empty request, ServerCallContext context)
         {
-            AllProfessorsResonse allProfessorsResonse = new AllProfessorsResonse();
+            AllProfessorsResonse allProfessorsResonse = new();
 
             _logger.Log(LogLevel.Debug, "Request Received for CollegeGrpcService::GetAllProfessors");
 
