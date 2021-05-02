@@ -54,3 +54,8 @@ body {
     background-color: #2f5c8e!important;
     color: white!important;
   }
+
+  .spinner {
+    font-size:44px;
+    color:#2f5c8e!important;
+  }

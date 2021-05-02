@@ -1,4 +1,7 @@
-<div class="container col-sm-12 row justify-content-between py-4 mx-0 my-1" >
+<div class="container" *ngIf="!employeesList.length">
+    <span class="spinner">Loading ... <i class="fa fa-spinner fa-spin"></i></span>
+</div>
+<div class="container col-sm-12 row justify-content-between py-4 mx-0 my-1" *ngIf="employeesList.length">
     <div class="div-container row col-sm-4" *ngFor="let employee of employeesList">
         <div class="col-sm-12">
             <h3>{{employee.name}}</h3>

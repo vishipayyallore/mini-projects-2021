@@ -13,6 +13,7 @@ export class EmployeesTableComponent implements OnInit {
 
     professorsList: ProfessorDto[] = [];
     imageWidth = 50;
+    imageHeight = 50;
     imageMargin = 1;
     
     constructor(private professorsGrpcserviceService: ProfessorsGrpcserviceService) {

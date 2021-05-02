@@ -1,5 +1,7 @@
-
-<div class="card mt-2 mb-2">
+<div class="container" *ngIf="!professorsList.length">
+  <span class="spinner">Loading ... <i class="fa fa-spinner fa-spin"></i></span>
+</div>
+<div class="card mt-2 mb-2" *ngIf="professorsList.length">
     <div class="card-header">
       <h2 class="PageTitle">Professors List</h2>
     </div>
@@ -9,8 +11,8 @@
           <i class="fa fa-plus float-margintop"></i>
           </a>
       </div> -->
-      <table class='table table-striped table-bordered' aria-labelledby="tableLabel" *ngIf="professorsList">
-        <thead class="thead-dark">
+      <table class='table table-striped table-bordered table-hover shadow' aria-labelledby="tableLabel" *ngIf="professorsList">
+        <thead>
           <tr>
             <th>Professor Id</th>
             <th>Picture</th>
@@ -26,12 +28,12 @@
           <tr *ngFor="let professor of professorsList">
             <td>{{ professor.professorid }}</td>
             <td><img class="rounded-circle" src="assets{{professor.pictureurl}}" [title]='professor.name'
-              [style.width.px]='imageWidth' [style.margin.px]='imageMargin' /></td>
+              [style.width.px]='imageWidth' [style.margin.px]='imageMargin' [style.height.px]="imageHeight"/></td>
             <td>{{ professor.name }}</td>
             <td>{{ professor.doj }}</td>
             <td>{{ professor.teaches }}</td>
             <td>{{ professor.salary | currency }}</td>
-            <td>{{ professor.isphd }}</td>
+            <td><i class="fa {{ professor.isphd ? 'fa-thumbs-up' : 'fa-thumbs-down'}} fa-2x"></i></td>
             <td>
               <button type="button" class="btn btn-warning btn-sm move-right text-white"
                 [routerLink]="['/edit-professor', professor.professorid]">
