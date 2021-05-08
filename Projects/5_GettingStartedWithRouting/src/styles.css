@@ -1,4 +1,3 @@
-
 @import "../node_modules/font-awesome/css/font-awesome.css";
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
@@ -35,6 +34,7 @@ body {
   }
 
   .card-header {
+    font-weight: bolder;
     background-color: rgb(233, 236, 240);
     color: navy;
   }
@@ -51,4 +51,16 @@ body {
   hr {
     height: 1px;
     background-color: navy;
+  }
+
+  .PageTitle {
+    color: #251B24;
+  }
+
+  .btn-maincolor {
+    background-color: #3f51b5;
+  }
+
+  .spinner{
+    color: navy;
   }

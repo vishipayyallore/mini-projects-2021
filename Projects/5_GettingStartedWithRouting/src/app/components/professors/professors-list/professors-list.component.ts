@@ -11,9 +11,15 @@ export class ProfessorsListComponent implements OnInit {
   professorsList: IProfessor[];
   imageWidth = 50;
   imageMargin = 1;
-  
+
   constructor() {
-    this.professorsList = [
+    setTimeout(() => {
+      this.professorsList = this.getProfessorsList();
+    }, 500);
+  }
+
+  getProfessorsList(): IProfessor[] {
+    return [
       {
         professorId: 1,
         name: 'Shiva',

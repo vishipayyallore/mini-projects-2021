@@ -14,7 +14,14 @@ export class EmployeesListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.employeesList = [
+
+    setTimeout(() => {
+      this.employeesList = this.getEmployeesList();
+    }, 500);
+  }
+
+  getEmployeesList(): IEmployee[] {
+    return [
       {
         id: 'A101',
         fullName: 'Mithun Nair',
@@ -60,5 +67,5 @@ export class EmployeesListComponent implements OnInit {
   onRatingClicked(currentRating: number): void {
     console.log(`From Parent :: Current Selected Rating: ${currentRating}`);
   }
-  
+
 }
