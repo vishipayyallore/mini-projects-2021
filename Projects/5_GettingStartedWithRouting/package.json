@@ -20,12 +20,15 @@
     "@angular/platform-browser": "~11.2.13",
     "@angular/platform-browser-dynamic": "~11.2.13",
     "@angular/router": "~11.2.13",
+    "@fullcalendar/angular": "^5.7.0",
+    "@fullcalendar/daygrid": "^5.7.0",
+    "@fullcalendar/interaction": "^5.7.0",
     "bootstrap": "^4.6.0",
+    "firebase": "^7.0 || ^8.0",
     "font-awesome": "^4.7.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.3",
-    "firebase": "^7.0 || ^8.0"
+    "zone.js": "~0.11.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.12",

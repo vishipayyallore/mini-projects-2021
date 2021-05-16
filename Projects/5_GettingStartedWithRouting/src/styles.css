@@ -67,3 +67,7 @@ body {
   .spinner{
     color: navy;
   }
+
+  .calendar-div-backgroudcolor {
+    background-color: rgb(245, 244, 240);
+  }

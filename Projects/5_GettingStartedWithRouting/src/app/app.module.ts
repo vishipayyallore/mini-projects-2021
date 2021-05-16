@@ -13,6 +13,17 @@ import { EmployeesListComponent } from './components/employees/employees-list/em
 import { DashboardComponent } from './components/home/dashboard/dashboard.component';
 import { PageNotfoundComponent } from './components/shared/page-notfound/page-notfound.component';
 
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
+import { FullCalendarComponent } from './components/shared/full-calendar/full-calendar.component';
+import { ShowCalendarComponent } from './components/shared/show-calendar/show-calendar.component';
+
+FullCalendarModule.registerPlugins([
+  dayGridPlugin,
+  interactionPlugin
+]);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,12 +33,15 @@ import { PageNotfoundComponent } from './components/shared/page-notfound/page-no
     RatingComponent,
     EmployeesListComponent,
     DashboardComponent,
-    PageNotfoundComponent
+    PageNotfoundComponent,
+    FullCalendarComponent,
+    ShowCalendarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FullCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

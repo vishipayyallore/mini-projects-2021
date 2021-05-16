@@ -1,5 +1,13 @@
 # Collegewebapp
 
+npm install --save @fullcalendar/angular @fullcalendar/daygrid
+npm i @fullcalendar/interaction
+
+Updated the app.module.ts
+
+ng g c components/shared/full-calendar
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
 ## Development server
