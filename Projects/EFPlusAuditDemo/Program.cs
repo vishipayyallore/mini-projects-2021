@@ -15,29 +15,30 @@ namespace EFPlusAuditDemo
         {
             GenerateData();
 
-            // Audit : Easily tracks changes, exclude/include entity or property and auto save audit entries in the database.
-            // See also Context
-            using (EntityContext context = new())
-            {
-                var listToRemove = context.Customers.Where(x => x.IsActive == false).ToList();
-                var listToModify = context.Customers.Where(x => x.IsActive == true).ToList();
-                var listToAdd = new List<Customer>() { new Customer() { Name = "Customer_C", Description = "Description", IsActive = false } };
-
-                context.Customers.AddRange(listToAdd); // add
-                context.Customers.RemoveRange(listToRemove); // remove
-                listToModify.First().Description = "Updated_A"; // modify
-
-                var audit = new Audit
-                {
-                    CreatedBy = "ZZZ Projects" // Optional
-                };
-
-                context.SaveChanges(audit);
-            }
+            PerformChanges();
 
             WriteLine("\n\nPress any key ...");
             ReadKey();
-            
+        }
+
+        private static void PerformChanges()
+        {
+            using EntityContext context = new();
+
+            var listToRemove = context.Customers.Where(x => x.IsActive == false).ToList();
+            var listToModify = context.Customers.Where(x => x.IsActive == true).ToList();
+            var listToAdd = new List<Customer>() { new Customer() { Name = "Customer_C", Description = "Description", IsActive = false } };
+
+            context.Customers.AddRange(listToAdd); // add
+            context.Customers.RemoveRange(listToRemove); // remove
+            listToModify.First().Description = "Updated_A"; // modify
+
+            var audit = new Audit
+            {
+                CreatedBy = "ZZZ Projects" // Optional
+            };
+
+            context.SaveChanges(audit);
         }
 
         public static string GetConnectionString(string itemName)
@@ -61,4 +62,25 @@ namespace EFPlusAuditDemo
         }
 
     }
+
 }
+
+
+////Retrieve AuditEntries for specific item : You can filter the AuditEntries DbSet using Where method and providing either the item or the key.
+//using (var context = new EntityContext())
+//{
+//    var item = context.Customers.Where(x => x.Name == "Customer_C").ToList().First();
+
+//    FiddleHelper.WriteTable("All Entry", context.AuditEntries.Where(item).ToList());
+
+//    FiddleHelper.WriteTable("All Entry", context.AuditEntries.Where<Customer>(item.CustomerID).ToList());
+
+//    int id = item.CustomerID;
+
+//    FiddleHelper.WriteTable("All Entry", context.AuditEntries.Where<Customer>(id).ToList());
+
+//    foreach (var entry in context.AuditEntries.Where<Customer>(id).ToList())
+//    {
+//        FiddleHelper.WriteTable("Properties for Entry ID: " + entry.AuditEntryID, context.AuditEntryProperties.Where(x => x.AuditEntryID == entry.AuditEntryID).ToList());
+//    }
+//}
