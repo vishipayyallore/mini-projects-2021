@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFPlusAuditDemo", "EFPlusAuditDemo.csproj", "{5ADC4066-9741-4980-9EB6-F1E8F0F4E440}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{87949B3E-7944-452F-A30F-EEF41AE79E7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ADC4066-9741-4980-9EB6-F1E8F0F4E440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ADC4066-9741-4980-9EB6-F1E8F0F4E440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ADC4066-9741-4980-9EB6-F1E8F0F4E440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ADC4066-9741-4980-9EB6-F1E8F0F4E440}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F18EC1D9-139A-4E8D-9C81-B3768B92CBC7}
+	EndGlobalSection
+EndGlobal
