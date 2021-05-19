@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using UserMgmt.API.Entities;
+using UserMgmt.Data;
 
-namespace UserMgmt.API.Interfaces
+namespace UserMgmt.API.Repositories
 {
 
     public interface IUserLicenseRepository

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using UserMgmt.API.Entities;
+using UserMgmt.Data;
 
 namespace UserMgmt.API.Persistence
 {

@@ -7,7 +7,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using UserMgmt.API.Common;
-using UserMgmt.API.Interfaces;
 using UserMgmt.API.Persistence;
 using UserMgmt.API.Repositories;
 

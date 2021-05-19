@@ -4,8 +4,8 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Net;
 using System.Threading.Tasks;
-using UserMgmt.API.Entities;
-using UserMgmt.API.Interfaces;
+using UserMgmt.API.Repositories;
+using UserMgmt.Data;
 
 namespace UserMgmt.API.Controllers
 {

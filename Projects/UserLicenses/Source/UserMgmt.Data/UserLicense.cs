@@ -1,8 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace UserMgmt.API.Entities
+namespace UserMgmt.Data
 {
+
     public class UserLicense
     {
         [Key]
