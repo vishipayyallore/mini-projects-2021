@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -35,6 +36,17 @@ namespace UserMgmt.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "UserMgmt.API", Version = "v1" });
             });
 
+            // 1. Add Authentication Services
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = Configuration["Auth0:Authority"];
+                options.Audience = Configuration["Auth0:Audience"];
+            });
+
             services.AddCors(o => o.AddPolicy(_policyName, builder =>
             {
                 builder.AllowAnyOrigin()
@@ -63,6 +75,9 @@ namespace UserMgmt.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            // 2. Enable authentication middleware
+            app.UseAuthentication();
 
             app.UseCors(_policyName);
 

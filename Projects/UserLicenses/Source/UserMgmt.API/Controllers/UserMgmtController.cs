@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Net;
@@ -11,6 +12,7 @@ namespace UserMgmt.API.Controllers
 
     [Route("api/v1/[controller]")]
     [ApiController]
+    [Authorize]
     public class UserMgmtController : ControllerBase
     {
         private readonly IUserLicenseRepository _userLicenseRepository;
@@ -27,6 +29,8 @@ namespace UserMgmt.API.Controllers
         [ProducesResponseType(typeof(UserLicense), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<UserLicense>> Get(string userId)
         {
+            _logger.LogInformation($"Received request for User: {userId}");
+
             var userLicenses = await _userLicenseRepository
                             .GetAllLicensesForUser(userId)
                             .ConfigureAwait(false);
