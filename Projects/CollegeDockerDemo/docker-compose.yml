@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  college.webapi:
+    image: ${DOCKER_REGISTRY-}collegewebapi
+    build:
+      context: .
+      dockerfile: Source/College.WebAPI/Dockerfile
+  todo.webapi:
+    image: ${DOCKER_REGISTRY-}todowebapi
+    build:
+      context: .
+      dockerfile: Source/ToDo.WebAPI/Dockerfile
