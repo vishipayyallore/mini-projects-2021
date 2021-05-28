@@ -49,6 +49,9 @@ export class GetProfessorResponse extends jspb.Message {
   getPictureurl(): string;
   setPictureurl(value: string): void;
 
+  getRating(): number;
+  setRating(value: number): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetProfessorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetProfessorResponse): GetProfessorResponse.AsObject;
@@ -68,6 +71,7 @@ export namespace GetProfessorResponse {
     salary: number,
     isphd: boolean,
     pictureurl: string,
+    rating: number,
   }
 }
 

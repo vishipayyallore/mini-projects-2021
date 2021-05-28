@@ -21,7 +21,7 @@
           <th>Professor Id</th>
           <th>Picture</th>
           <th>Name</th>
-          <th>DOJ</th>
+          <th>Rating</th>
           <th>Teaches</th>
           <th>Salary</th>
           <th>Is Phd</th>
@@ -34,7 +34,7 @@
           <td><img class="rounded-circle" src="assets{{professor.pictureurl}}" [title]='professor.name'
               [style.width.px]='imageWidth' [style.margin.px]='imageMargin' [style.height.px]="imageHeight" /></td>
           <td>{{ professor.name }}</td>
-          <td>{{ professor.doj }}</td>
+          <td>{{ professor.rating }}</td>
           <td>{{ professor.teaches }}</td>
           <td>{{ professor.salary | currency }}</td>
           <td><i class="fa {{ professor.isphd ? 'fa-thumbs-up' : 'fa-thumbs-down'}} fa-2x"></i></td>

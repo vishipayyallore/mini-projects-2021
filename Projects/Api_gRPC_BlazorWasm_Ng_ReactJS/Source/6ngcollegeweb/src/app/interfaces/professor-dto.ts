@@ -15,6 +15,8 @@ export interface ProfessorDto {
   isphd: boolean;
 
   pictureurl: string;
+
+  rating?: number | 0.0;
 }
 
 export interface ProfessorDtoApi {
@@ -31,6 +33,8 @@ export interface ProfessorDtoApi {
   isPhd: boolean;
 
   pictureUrl: string;
+
+  rating?: number | 0.0;
 }
 
 export interface ProfessorsGrpcDto {

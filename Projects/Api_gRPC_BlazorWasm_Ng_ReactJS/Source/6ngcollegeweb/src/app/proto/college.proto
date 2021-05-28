@@ -29,6 +29,8 @@ message GetProfessorResponse {
 	bool isPhd = 6;
 
 	string pictureUrl = 7;
+
+	double rating = 8;
 }
 
 message AllProfessorsResonse {

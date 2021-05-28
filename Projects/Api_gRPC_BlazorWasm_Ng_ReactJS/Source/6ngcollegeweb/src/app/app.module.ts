@@ -10,6 +10,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { EmployeesCardsComponent } from './components/employees/employees-cards/employees-cards.component';
 import { DashboardComponent } from './components/Home/dashboard/dashboard.component';
 import { EmployeesTableComponent } from './components/employees/employees-table/employees-table.component';
+import { RatingComponent } from './components/shared/rating/rating.component';
+import { PageNotfoundComponent } from './components/shared/page-notfound/page-notfound.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { EmployeesTableComponent } from './components/employees/employees-table/
     FooterComponent,
     EmployeesTableComponent,
     EmployeesCardsComponent,
+    RatingComponent,
+    PageNotfoundComponent,
     DashboardComponent
   ],
   imports: [

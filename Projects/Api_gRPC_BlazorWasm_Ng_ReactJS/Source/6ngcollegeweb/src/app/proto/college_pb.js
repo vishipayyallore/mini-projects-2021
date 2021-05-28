@@ -253,7 +253,8 @@ proto.GetProfessorResponse.toObject = function(includeInstance, msg) {
     teaches: jspb.Message.getFieldWithDefault(msg, 4, ""),
     salary: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
     isphd: jspb.Message.getBooleanFieldWithDefault(msg, 6, false),
-    pictureurl: jspb.Message.getFieldWithDefault(msg, 7, "")
+    pictureurl: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    rating: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 0.0)
   };
 
   if (includeInstance) {
@@ -318,6 +319,10 @@ proto.GetProfessorResponse.deserializeBinaryFromReader = function(msg, reader) {
     case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.setPictureurl(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setRating(value);
       break;
     default:
       reader.skipField();
@@ -395,6 +400,13 @@ proto.GetProfessorResponse.serializeBinaryToWriter = function(message, writer) {
   if (f.length > 0) {
     writer.writeString(
       7,
+      f
+    );
+  }
+  f = message.getRating();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      8,
       f
     );
   }
@@ -543,6 +555,24 @@ proto.GetProfessorResponse.prototype.getPictureurl = function() {
  */
 proto.GetProfessorResponse.prototype.setPictureurl = function(value) {
   return jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * optional double rating = 8;
+ * @return {number}
+ */
+proto.GetProfessorResponse.prototype.getRating = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 8, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.GetProfessorResponse} returns this
+ */
+proto.GetProfessorResponse.prototype.setRating = function(value) {
+  return jspb.Message.setProto3FloatField(this, 8, value);
 };
 
 
