@@ -11,6 +11,7 @@ import { ProfessorsApiserviceService } from 'src/app/services/professors-apiserv
 export class EmployeesCardsComponent implements OnInit {
 
   employeesList: ProfessorDtoApi[] = [];
+  ratingStars = 5;
 
   constructor(private professorsApiserviceService: ProfessorsApiserviceService) {
   }
@@ -19,6 +20,10 @@ export class EmployeesCardsComponent implements OnInit {
     this.loadAllProfessors();
   }
 
+  onRatingClicked(currentRating: number): void {
+    console.log(`From Parent :: Current Selected Rating: ${currentRating}`);
+  }
+  
   loadAllProfessors() {
     this.professorsApiserviceService.GetAllProfessors()
       .subscribe((data: ProfessorDtoApi[]) => {

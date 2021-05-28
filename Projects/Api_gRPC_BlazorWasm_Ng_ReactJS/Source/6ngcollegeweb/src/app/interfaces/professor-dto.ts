@@ -34,7 +34,7 @@ export interface ProfessorDtoApi {
 
   pictureUrl: string;
 
-  rating?: number | 0.0;
+  rating: number | 0.0;
 }
 
 export interface ProfessorsGrpcDto {
