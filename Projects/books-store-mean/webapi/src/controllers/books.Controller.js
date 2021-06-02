@@ -39,15 +39,17 @@ function booksController(Book) {
     async function get(request, response) {
         try {
 
-            const allBooks = await Book.find({});
+            return response.status(200).json(await Book.find({}));
 
-            if (allBooks && allBooks.length > 0) {
-                return response.status(200).json(allBooks);
-            } else {
-                console.log('No Books found!');
-                return response.status(200).json(allBooks);
-                // return response.status(404).json();
-            }
+            // const allBooks = await Book.find({});
+
+            // if (allBooks && allBooks.length > 0) {
+            //     return response.status(200).json(allBooks);
+            // } else {
+            //     console.log('No Books found!');
+            //     return response.status(200).json(allBooks);
+            //     // return response.status(404).json();
+            // }
 
         } catch (error) {
             return response.status(500).json(error);

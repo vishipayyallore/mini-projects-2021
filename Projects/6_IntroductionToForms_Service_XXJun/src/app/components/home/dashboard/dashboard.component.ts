@@ -10,6 +10,9 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    // @ts-ignore
+    console.log('Inside TS Component ml5 version:', ml5.version)
   }
 
 }
