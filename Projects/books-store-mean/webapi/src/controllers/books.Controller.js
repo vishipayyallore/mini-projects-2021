@@ -44,7 +44,9 @@ function booksController(Book) {
             if (allBooks && allBooks.length > 0) {
                 return response.status(200).json(allBooks);
             } else {
-                return response.status(404).json();
+                console.log('No Books found!');
+                return response.status(200).json(allBooks);
+                // return response.status(404).json();
             }
 
         } catch (error) {
