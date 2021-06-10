@@ -3,6 +3,10 @@
 
 ## Frontend
 
+```nodejs
+npx create-react-app .
+
+```
 
 ---
 
