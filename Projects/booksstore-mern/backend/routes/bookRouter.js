@@ -3,9 +3,9 @@
 import express from 'express';
 const bookRouter = express.Router();
 
-import { 
-    addBook, getAllBooks, doesBookExists 
-    , getBookById
+import {
+    addBook, getAllBooks, doesBookExists
+    , getBookById, updateBookById, deleteBookById
 } from '../controllers/booksController.js';
 
 // Middleware For Retrieving the Book
@@ -16,6 +16,8 @@ bookRouter.route('/')
     .post(addBook);
 
 bookRouter.route('/:bookId')
-    .get(getBookById);
+    .get(getBookById)
+    .put(updateBookById)
+    .delete(deleteBookById);
 
 export default bookRouter;

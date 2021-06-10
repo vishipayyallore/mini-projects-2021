@@ -73,9 +73,41 @@ const getBookById = asyncHandler(async (request, response) => {
 		.json(request.book);
 });
 
+const updateBookById = asyncHandler(async (request, response) => {
+
+	console.log(`Book Id: ${JSON.parse(JSON.stringify(request.book))._id} | Complete Book: ${JSON.stringify(request.book)}`);
+
+	Book.findByIdAndUpdate(request.params.bookId, request.body, {
+		new: true,
+		useFindAndModify: false,
+		runValidators: true
+	},
+		function (error, book) {
+			if (error) {
+				return response.status(500).json(error);
+			} else {
+				return response.status(200).json({ 'success': true, 'Message': 'Book updated Successfully', data: book });
+			}
+		});
+
+});
+
+const deleteBookById = asyncHandler(async (request, response) => {
+
+	console.log(`Book Id: ${JSON.parse(JSON.stringify(request.book))._id} | Completed Book: ${JSON.stringify(request.book)}`);
+
+	Book.findByIdAndDelete(request.book._id, function (error, book) {
+		if (error) {
+			return response.status(500).json(error);
+		}
+		else {
+			return response.status(204).json({ 'success': true, 'Message': 'Book Deleted Successfully' });
+		}
+	});
+
+});
+
 export {
-	getAllBooks,
-	addBook,
-	doesBookExists,
-	getBookById
+	getAllBooks, addBook, doesBookExists,
+	getBookById, updateBookById, deleteBookById
 };

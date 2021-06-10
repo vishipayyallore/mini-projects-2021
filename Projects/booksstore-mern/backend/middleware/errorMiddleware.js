@@ -1,21 +1,21 @@
 'use strict';
 
-const notFound = (req, res, next) => {
+const notFound = (request, response, next) => {
 
-    const error = new Error(`Not Found - ${req.originalUrl}`);
-    res.status(404);
+    const error = new Error(`Not Found - ${request.originalUrl}`);
+    response.status(404);
 
     next(error);
 };
 
-const errorHandler = (err, req, res, next) => {
+const errorHandler = (error, request, response, next) => {
 
-    const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
+    const statusCode = response.statusCode === 200 ? 500 : response.statusCode;
 
-    res.status(statusCode);
-    res.json({
+    response.status(statusCode);
+    response.json({
         success: false,
-        message: err.message,
+        message: error.message,
         stack: process.env.NODE_ENV === 'production' ? null : err.stack,
     });
 };
