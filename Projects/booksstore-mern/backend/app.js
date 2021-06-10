@@ -2,7 +2,8 @@
 
 import express from 'express';
 
-import morganLogger from './middleware/logger.js';
+import morganLogger from './middleware/loggerMiddleware.js';
+import bookRouter from './routes/bookRouter.js';
 
 // Initialize the application
 const webApi = express();
@@ -38,7 +39,6 @@ webApi.get('/api', (request, response) => {
 });
 
 // Middleware (To Import Additional Routes)
-// webApi.use('/api', bookRouter);
-
+webApi.use('/api/books', bookRouter);
 
 export default webApi;
