@@ -7,7 +7,7 @@ import { saveBook } from "../services/booksService";
 function AddBookScreen() {
 
     let history = useHistory();
-    
+
     const [book, setBook] = useState({
         pictureUrl: "/images/books/Book1.jpg",
         title: "C# 1E",
@@ -18,8 +18,7 @@ function AddBookScreen() {
         pages: 202,
         isActive: true
     });
-    
-    // const [checked, setChecked] = React.useState(true);
+
     const [checked, setChecked] = React.useState(true);
 
     const generateNumber = (min, max) => {
@@ -79,13 +78,13 @@ function AddBookScreen() {
 
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">ISBN: </label>
-                            <input type="text" name="language" className="form-control element formfield-marginbottom" maxLength="100"
+                            <input type="text" name="isbn" className="form-control element formfield-marginbottom" maxLength="100"
                                 onChange={handleFormChange} value={book.isbn} />
                         </div>
 
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Pages: </label>
-                            <input type="number" name="language" className="form-control element formfield-marginbottom" maxLength="100"
+                            <input type="number" name="pages" className="form-control element formfield-marginbottom" maxLength="100"
                                 onChange={handleFormChange} value={book.pages} />
                         </div>
 

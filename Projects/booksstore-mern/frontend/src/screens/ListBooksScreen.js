@@ -39,7 +39,7 @@ function ListBooksScreen() {
                         />
                     </div>
                     <br></br>
-                    <table className='table table-striped table-bordered' hidden={loading} aria-labelledby="tableLabel">
+                    <table className='table table-striped table-bordered shadow' hidden={loading} aria-labelledby="tableLabel">
                         <thead className="thead-dark">
                             <tr>
                                 <th>Book ID</th>

@@ -6,13 +6,13 @@ const TopNavbar = ({ icon, title }) => {
   return (
     <header>
       <nav className="navbar navbar-expand-md navbar-dark top-navbar-color py-0">
-        <Link to="/list-books" className="navbar-brand"><i className="fa fa-book" aria-hidden="true"></i> Book Store</Link>
+        <Link to="/" className="navbar-brand"><i className="fa fa-book" aria-hidden="true"></i> Book Store</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
           <span className="navbar-toggler-icon"></span>
         </button>
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link to='/'>Home</Link>
+            <Link to='/list-books'>Books</Link>
           </li>
           <li className="nav-item">
             <Link to='/about'>About</Link>

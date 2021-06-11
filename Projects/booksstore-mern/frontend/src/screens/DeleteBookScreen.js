@@ -51,26 +51,26 @@ function DeleteBookScreen({ match }) {
 
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Title : </label>
-                            <input type="text" name="title" className="form-control element ml-4" maxLength="100"
+                            <input type="text" name="title" className="form-control element formfield-marginbottom" maxLength="100"
                                 onChange={handleFormChange} value={book.title} />
                         </div>
 
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Author: </label>
-                            <input type="text" name="author" className="form-control element ml-4" maxLength="100"
+                            <input type="text" name="author" className="form-control element formfield-marginbottom" maxLength="100"
                                 onChange={handleFormChange} value={book.author} />
                         </div>
 
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Published: </label>
-                            <input type="date" name="dateOfPublish" className="form-control element ml-4"
+                            <input type="date" name="dateOfPublish" className="form-control element formfield-marginbottom"
                                 onChange={handleFormChange} value={new Date(book.dateOfPublish).toISOString().slice(0, 10).replace(/-/g, "-").replace("T", " ")} />
                         </div>
 
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Language: </label>
-                            <input type="text" name="language" className="form-control element ml-4" maxLength="100"
-                                onChange={handleFormChange} value={book.language} />
+                            <input type="text" name="language" className="form-control element formfield-marginbottom" maxLength="100"
+                                onChange={handleFormChange} value={book.language} readOnly/>
                         </div>
                     </form>
                     <Link to="" onClick={handleDeleteBookSubmit} type="submit" className="btn btn-danger btn-sm ml-2 shadow mr-2" title="Delete Book">
