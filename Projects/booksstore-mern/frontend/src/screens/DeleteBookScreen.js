@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 import { deleteBookById, getBookById } from "../services/booksService";
 
-function DeleteBookPage({ match }) {
+function DeleteBookScreen({ match }) {
 
     let history = useHistory();
 
@@ -84,4 +84,4 @@ function DeleteBookPage({ match }) {
     );
 }
 
-export default DeleteBookPage;
+export default DeleteBookScreen;

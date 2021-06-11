@@ -4,7 +4,7 @@ import ClockLoader from "react-spinners/ClockLoader";
 
 import { getAllBooks } from "../services/booksService";
 
-function ListBooksPage() {
+function ListBooksScreen() {
 
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -63,7 +63,7 @@ function ListBooksPage() {
                                             <th scope="col">
                                                 <Link to={"/edit-book/" + book._id} className="btn btn-warning btn-sm ml-2 shadow mr-2">
                                                     <i className="fa fa-edit fa-fw" aria-hidden="true"></i> Edit</Link>
-                                                <Link to={"/delete-book/" + book._id} className="btn btn-danger btn-sm ml-2 shadow">
+                                                <Link to={"/delete-book/" + book._id} className="btn btn-danger btn-sm shadow button-marginleft">
                                                     <i className="fa fa-trash" aria-hidden="true"></i> Delete</Link>
                                             </th>
                                         </tr>
@@ -78,4 +78,4 @@ function ListBooksPage() {
     );
 }
 
-export default ListBooksPage;
+export default ListBooksScreen;

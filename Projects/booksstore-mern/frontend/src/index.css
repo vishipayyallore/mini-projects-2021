@@ -45,6 +45,7 @@
 }
 
 footer {
+	position: fixed;
 	background: #154360;
 	color: white;
 	padding: 1px;
@@ -57,7 +58,7 @@ footer {
 	width: 60px;
 	height: 60px;
 	right: 40px;
-	top: 74px;
+	top: 54px;
 	background-color: #154360;
 	color: #d4e6f1;
 	border-radius: 50px;
@@ -86,3 +87,21 @@ a:hover {
 	background-color: #154360;
 	color: yellow;
 }
+
+
+.button-marginleft{
+    margin-left: 10px;
+}
+
+.div-marginbottom{
+    margin-bottom: 10px;
+}
+
+table{
+    color: navy;
+  }
+  
+  thead{
+    background-color: rgb(233, 236, 240);
+    color: navy;
+  }

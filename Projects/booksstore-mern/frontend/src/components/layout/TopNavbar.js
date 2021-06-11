@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const TopNavbar = ({ icon, title }) => {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark top-navbar-color">
+    <nav className="navbar navbar-expand-md navbar-dark top-navbar-color py-0">
       <div className="container">
         <Link to="/list-books" className="navbar-brand"><i className="fa fa-book" aria-hidden="true"></i> Book Store</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">

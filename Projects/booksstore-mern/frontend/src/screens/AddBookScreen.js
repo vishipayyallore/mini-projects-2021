@@ -1,32 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import { editBook, getBookById } from "../services/booksService";
+import { saveBook } from "../services/booksService";
 
-function EditBookPage({ match }) {
+function AddBookScreen() {
 
     let history = useHistory();
 
     const [book, setBook] = useState({
-        _id: "",
         title: "",
         author: "No Name",
         dateOfPublish: (new Date()).toISOString().slice(0, 10).replace(/-/g, "-").replace("T", " "),
         language: "C#"
     });
 
-    useEffect(() => {
-        getBookById(match.params.id)
-            .then(_book => setBook(_book));
-    }, [match.params.id]);
-
-    function handleEditBookSubmit(event) {
+    function handleAddBookSubmit(event) {
         event.preventDefault();
-        editBook(book)
+        saveBook(book)
             .then(_ => {
                 history.push('/list-books');
-                toast.success("Book Updated.");
+                toast.success("Book saved.");
             })
             .catch(_ => {
                 toast.error("Error saving book");
@@ -43,7 +37,7 @@ function EditBookPage({ match }) {
     return (
         <div className="card shadow mt-2 mb-2">
             <div className="card-header">
-                <h2 className="PageTitle">Edit Book</h2>
+                <h2 className="PageTitle">Add Book</h2>
             </div>
             <div className="card-body">
                 <div className="col-md-8 mb-4">
@@ -65,7 +59,7 @@ function EditBookPage({ match }) {
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Published: </label>
                             <input type="date" name="dateOfPublish" className="form-control element ml-4"
-                            onChange={handleFormChange} value={new Date(book.dateOfPublish).toISOString().slice(0, 10).replace(/-/g, "-").replace("T", " ")} />
+                                onChange={handleFormChange} pattern="\d{4}-\d{2}-\d{2}" value={book.dateOfPublish} />
                         </div>
 
                         <div className="form-group divflex labelAndTextbox">
@@ -74,8 +68,8 @@ function EditBookPage({ match }) {
                                 onChange={handleFormChange} value={book.language} />
                         </div>
                     </form>
-                    <Link to="" onClick={handleEditBookSubmit} type="submit" className="btn btn-warning btn-sm ml-2 shadow mr-2">
-                        <i className="fa fa-edit fa-fw" aria-hidden="true"></i> Update</Link>
+                    <Link to="" onClick={handleAddBookSubmit} type="submit" className="btn btn-primary btn-sm ml-2 shadow mr-2">
+                        <i className="fa fa-save fa-fw" aria-hidden="true"></i> Save</Link>
                     <Link to="/list-books" className="btn btn-maincolor btn-sm ml-2 shadow">
                         <i className="fa fa-list" aria-hidden="true"></i> Books List</Link>
 
@@ -85,4 +79,4 @@ function EditBookPage({ match }) {
     );
 }
 
-export default EditBookPage;
+export default AddBookScreen;

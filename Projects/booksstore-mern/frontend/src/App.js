@@ -10,10 +10,10 @@ import SideNavbar from "./components/layout/SideNavBar";
 import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
 import PageNotFound from "./components/shared/PageNotFound";
-import ListBooksPage from "./screens/ListBooksPage";
-import AddBookPage from "./screens/AddBookPage";
-import EditBookPage from "./screens/EditBookPage";
-import DeleteBookPage from "./screens/DeleteBookPage";
+import ListBooksScreen from "./screens/ListBooksScreen";
+import AddBookScreen from "./screens/AddBookScreen";
+import EditBookScreen from "./screens/EditBookScreen";
+import DeleteBookScreen from "./screens/DeleteBookScreen";
 
 function App() {
     return (
@@ -22,20 +22,20 @@ function App() {
 
             <div className="container-fluid">
                 <ToastContainer autoClose={3000} hideProgressBar />
-                <div className=" row">
-                    <div className="col-md-2 d-none d-md-block bg-sidebar sidebar">
+                <div className="row">
+                    <div className="col-md-2 bg-sidebar sidebar">
                         <div className="sidebar-sticky">
                             <SideNavbar />
                         </div>
                     </div>
-                    <div className="col-md-10 ml-sm-auto col-lg-10 px-4">
+                    <div className="col-md-10 ml-sm-auto px-4">
                         <Switch>
                             <Route path="/" exact component={HomePage} />
                             <Route path="/about" component={AboutPage} />
-                            <Route path="/list-books" component={ListBooksPage} />
-                            <Route path="/add-book" component={AddBookPage} />
-                            <Route path="/edit-book/:id" component={EditBookPage} />
-                            <Route path="/delete-book/:id" component={DeleteBookPage} />
+                            <Route path="/list-books" component={ListBooksScreen} />
+                            <Route path="/add-book" component={AddBookScreen} />
+                            <Route path="/edit-book/:id" component={EditBookScreen} />
+                            <Route path="/delete-book/:id" component={DeleteBookScreen} />
                             <Route component={PageNotFound} />
                         </Switch>
                     </div>
