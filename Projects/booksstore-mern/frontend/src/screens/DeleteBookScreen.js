@@ -73,10 +73,10 @@ function DeleteBookScreen({ match }) {
                                 onChange={handleFormChange} value={book.language} />
                         </div>
                     </form>
-                    <Link to="" onClick={handleDeleteBookSubmit} type="submit" className="btn btn-danger btn-sm ml-2 shadow mr-2">
-                        <i className="fa fa-trash" aria-hidden="true"></i> Delete</Link>
-                    <Link to="/list-books" className="btn btn-maincolor btn-sm ml-2 shadow">
-                        <i className="fa fa-list" aria-hidden="true"></i> Books List</Link>
+                    <Link to="" onClick={handleDeleteBookSubmit} type="submit" className="btn btn-danger btn-sm ml-2 shadow mr-2" title="Delete Book">
+                        <i className="fa fa-trash fa-2x" aria-hidden="true"></i></Link>
+                    <Link to="/list-books" className="btn btn-maincolor btn-sm ml-2 shadow button-marginleft" title="Books List">
+                        <i className="fa fa-list fa-2x" aria-hidden="true"></i></Link>
 
                 </div>
             </div>

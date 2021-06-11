@@ -68,10 +68,10 @@ function AddBookScreen() {
                                 onChange={handleFormChange} value={book.language} />
                         </div>
                     </form>
-                    <Link to="" onClick={handleAddBookSubmit} type="submit" className="btn btn-primary btn-sm ml-2 shadow mr-2">
-                        <i className="fa fa-save fa-fw" aria-hidden="true"></i> Save</Link>
-                    <Link to="/list-books" className="btn btn-maincolor btn-sm ml-2 shadow">
-                        <i className="fa fa-list" aria-hidden="true"></i> Books List</Link>
+                    <Link to="" onClick={handleAddBookSubmit} type="submit" className="btn btn-primary btn-sm ml-2 shadow" title="Save Book">
+                        <i className="fa fa-save fa-2x" aria-hidden="true"></i></Link>
+                    <Link to="/list-books" className="btn btn-maincolor btn-sm ml-2 shadow button-marginleft" title="Books List">
+                        <i className="fa fa-list fa-2x" aria-hidden="true"></i></Link>
 
                 </div>
             </div>

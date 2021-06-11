@@ -4,24 +4,22 @@ import { Link } from 'react-router-dom';
 
 const TopNavbar = ({ icon, title }) => {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark top-navbar-color py-0">
-      <div className="container">
+    <header>
+      <nav className="navbar navbar-expand-md navbar-dark top-navbar-color py-0">
         <Link to="/list-books" className="navbar-brand"><i className="fa fa-book" aria-hidden="true"></i> Book Store</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarMain">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link to='/'>Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link to='/about'>About</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item">
+            <Link to='/'>Home</Link>
+          </li>
+          <li className="nav-item">
+            <Link to='/about'>About</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

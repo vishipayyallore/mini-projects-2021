@@ -65,7 +65,7 @@ function EditBookScreen({ match }) {
                         <div className="form-group divflex labelAndTextbox">
                             <label className="element col-md-2">Published: </label>
                             <input type="date" name="dateOfPublish" className="form-control element ml-4"
-                            onChange={handleFormChange} value={new Date(book.dateOfPublish).toISOString().slice(0, 10).replace(/-/g, "-").replace("T", " ")} />
+                                onChange={handleFormChange} value={new Date(book.dateOfPublish).toISOString().slice(0, 10).replace(/-/g, "-").replace("T", " ")} />
                         </div>
 
                         <div className="form-group divflex labelAndTextbox">
@@ -74,10 +74,10 @@ function EditBookScreen({ match }) {
                                 onChange={handleFormChange} value={book.language} />
                         </div>
                     </form>
-                    <Link to="" onClick={handleEditBookSubmit} type="submit" className="btn btn-warning btn-sm ml-2 shadow mr-2">
-                        <i className="fa fa-edit fa-fw" aria-hidden="true"></i> Update</Link>
-                    <Link to="/list-books" className="btn btn-maincolor btn-sm ml-2 shadow">
-                        <i className="fa fa-list" aria-hidden="true"></i> Books List</Link>
+                    <Link to="" onClick={handleEditBookSubmit} type="submit" className="btn btn-warning btn-sm text-white shadow" title="Update Book">
+                        <i className="fa fa-save fa-2x" aria-hidden="true"></i></Link>
+                    <Link to="/list-books" className="btn btn-maincolor btn-sm ml-2 shadow button-marginleft" title="Books List">
+                        <i className="fa fa-list fa-2x" aria-hidden="true"></i></Link>
 
                 </div>
             </div>
