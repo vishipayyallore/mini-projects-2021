@@ -121,3 +121,13 @@ table{
     background-color: rgb(233, 236, 240);
     color: navy;
   }
+
+  img {
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 3px rgb(5, 43, 126);
+  }
+
+  .formfield-marginbottom{
+    margin-bottom: 10px;
+}

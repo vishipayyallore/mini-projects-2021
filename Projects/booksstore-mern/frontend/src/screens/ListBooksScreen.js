@@ -43,10 +43,14 @@ function ListBooksScreen() {
                         <thead className="thead-dark">
                             <tr>
                                 <th>Book ID</th>
-                                <th>Published On</th>
-                                <th>Language</th>
-                                <th>Author</th>
+                                <th>Picture</th>
                                 <th>Title</th>
+                                <th>Author</th>
+                                <th>Language</th>
+                                <th>ISBN</th>
+                                <th>Pages</th>
+                                <th>Active</th>
+                                <th>Published</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
@@ -56,10 +60,20 @@ function ListBooksScreen() {
                                     return (
                                         <tr key={book._id}>
                                             <td>{book._id}</td>
-                                            <td>{book.dateOfPublish}</td>
-                                            <td>{book.language}</td>
-                                            <td>{book.author}</td>
+                                            <td><img className="rounded-circle" src={book.pictureUrl} width="50px" alt="Book" /></td>
                                             <td>{book.title}</td>
+                                            <td>{book.author}</td>
+                                            <td>{book.language}</td>
+                                            <td>{book.isbn}</td>
+                                            <td>{book.pages}</td>
+                                            <td>
+                                                {book.isActive ? (
+                                                    <i className="fa fa-thumbs-up fa-2x" style={{ color: 'green' }}></i>
+                                                ) : (
+                                                    <i className='fas fa-thumbs-down fa-2x' style={{ color: 'red' }}></i>
+                                                )}
+                                            </td>
+                                            <td>{book.dateOfPublish}</td>
                                             <th scope="col">
                                                 <Link to={"/edit-book/" + book._id} className="btn btn-warning btn-sm ml-2 shadow text-white" title="Edit Book">
                                                     <i className="fa fa-edit fa-2x" aria-hidden="true"></i></Link>
