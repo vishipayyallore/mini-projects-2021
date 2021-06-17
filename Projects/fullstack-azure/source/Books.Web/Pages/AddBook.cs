@@ -14,7 +14,7 @@ namespace Books.Web.Pages
         
         [Inject]
         private NavigationManager NavigationManager { get; set; }
-        private Random _random = new Random();
+        private Random _random = new();
 
         public Book book { get; set; } = new Book();
 
@@ -30,6 +30,8 @@ namespace Books.Web.Pages
         protected async Task Home()
         {
             NavigationManager.NavigateTo("bookslist");
+            
+            await Task.FromResult(true);
         }
 
     }

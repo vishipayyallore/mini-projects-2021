@@ -16,6 +16,7 @@ namespace Books.Web.Services
         public BookDataService(HttpClient httpClient)
         {
             _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
+
         }
 
         public async Task<IEnumerable<Book>> GetAllBooks()
