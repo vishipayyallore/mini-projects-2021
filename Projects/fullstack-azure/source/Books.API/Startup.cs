@@ -1,15 +1,11 @@
 using Books.API.Data;
-using IdentityServer4.AccessTokenValidation;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Security.Claims;
 
 namespace Books.API
 {
@@ -28,44 +24,12 @@ namespace Books.API
         public void ConfigureServices(IServiceCollection services)
         {
             services
-        .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-        .AddJwtBearer(options =>
-        {
-            options.Authority = Configuration["Auth0:Authority"];
-            options.Audience = Configuration["Auth0:Audience"];
-        });
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            //}).AddJwtBearer(options =>
-            //{
-            //    options.Authority = Configuration["Auth0:Authority"];
-            //    options.Audience = Configuration["Auth0:ApiIdentifier"];
-            //    // If the access token does not have a `sub` claim, `User.Identity.Name` will be `null`. Map it to a different claim by setting the NameClaimType below.
-            //    options.TokenValidationParameters = new TokenValidationParameters
-            //    {
-            //        NameClaimType = ClaimTypes.NameIdentifier
-            //    };
-            //});
-
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            //}).AddJwtBearer(options =>
-            //{
-            //    options.Authority = Configuration["Auth0:Authority"];
-            //    options.Audience = Configuration["Auth0:ApiIdentifier"];
-            //});
-
-            //services.AddAuthentication(
-            //    //IdentityServerAuthenticationDefaults.AuthenticationScheme)
-            //.AddIdentityServerAuthentication(options =>
-            //{
-            //    options.Authority = Configuration["Auth0:Authority"];
-            //    options.ApiName = Configuration["Auth0:ApiIdentifier"];
-            //});
+                .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.Authority = Configuration["Auth0:Authority"];
+                    options.Audience = Configuration["Auth0:Audience"];
+                });
 
             services.AddCors(options =>
             {
@@ -115,3 +79,37 @@ namespace Books.API
         }
     }
 }
+
+
+//services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//}).AddJwtBearer(options =>
+//{
+//    options.Authority = Configuration["Auth0:Authority"];
+//    options.Audience = Configuration["Auth0:ApiIdentifier"];
+//    // If the access token does not have a `sub` claim, `User.Identity.Name` will be `null`. Map it to a different claim by setting the NameClaimType below.
+//    options.TokenValidationParameters = new TokenValidationParameters
+//    {
+//        NameClaimType = ClaimTypes.NameIdentifier
+//    };
+//});
+
+//services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//}).AddJwtBearer(options =>
+//{
+//    options.Authority = Configuration["Auth0:Authority"];
+//    options.Audience = Configuration["Auth0:ApiIdentifier"];
+//});
+
+//services.AddAuthentication(
+//    //IdentityServerAuthenticationDefaults.AuthenticationScheme)
+//.AddIdentityServerAuthentication(options =>
+//{
+//    options.Authority = Configuration["Auth0:Authority"];
+//    options.ApiName = Configuration["Auth0:ApiIdentifier"];
+//});

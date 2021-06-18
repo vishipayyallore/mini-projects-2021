@@ -37,6 +37,8 @@ namespace Books.API.Controllers
 
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Book>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<ActionResult<IEnumerable<Book>>> Get()
         {
             _logger.LogInformation("Received the Get() request.");
@@ -50,6 +52,7 @@ namespace Books.API.Controllers
 
         [HttpGet("{id}")]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
         [ProducesResponseType(typeof(Book), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Book>> Get(int id)
         {

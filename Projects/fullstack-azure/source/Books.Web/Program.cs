@@ -22,52 +22,52 @@ namespace Books.Web
             builder.Services.AddOidcAuthentication(options =>
             {
                 builder.Configuration.Bind("Auth0", options.ProviderOptions);
-                // options.ProviderOptions.ResponseType = "code"; // "token id_token"; | "code";
             });
-
-            //builder.Services.AddTransient<AuthorizationMessageHandler>(sp =>
-            //{
-            //    var provider = sp.GetRequiredService<IAccessTokenProvider>();
-            //    var naviManager = sp.GetRequiredService<NavigationManager>();
-
-            //    // 👇 Create a new "AuthorizationMessageHandler" instance,
-            //    //    and return it after configuring it.
-            //    var handler = new AuthorizationMessageHandler(provider, naviManager);
-            //    handler.ConfigureHandler(authorizedUrls: new[] { builder.Configuration["WebApis:Books"] });
-            //    return handler;
-            //});
 
             builder.Services.AddHttpClient<IBookDataService, BookDataService>(client =>
                 client.BaseAddress = new Uri(builder.Configuration["WebApis:Books"]))
-            .AddHttpMessageHandler(sp =>
-                {
-                    var provider = sp.GetRequiredService<IAccessTokenProvider>();
-                    var naviManager = sp.GetRequiredService<NavigationManager>();
+                .AddHttpMessageHandler(sp =>
+                    {
+                        var provider = sp.GetRequiredService<IAccessTokenProvider>();
+                        var naviManager = sp.GetRequiredService<NavigationManager>();
 
-                    // 👇 Create a new "AuthorizationMessageHandler" instance,
-                    //    and return it after configuring it.
-                    var handler = new AuthorizationMessageHandler(provider, naviManager);
+                        var handler = new AuthorizationMessageHandler(provider, naviManager);
+                        handler.ConfigureHandler(authorizedUrls: new[] { builder.Configuration["WebApis:Books"] });
 
-                    handler.ConfigureHandler(authorizedUrls: new[] { builder.Configuration["WebApis:Books"] });
-                    return handler;
-                }
-            );
-
-            //builder.Services.AddTransient<AuthorizationMessageHandler>(sp =>
-            //{
-            //    var provider = sp.GetRequiredService<IAccessTokenProvider>();
-            //    var naviManager = sp.GetRequiredService<NavigationManager>();
-
-            //    // 👇 Create a new "AuthorizationMessageHandler" instance,
-            //    //    and return it after configuring it.
-            //    var handler = new AuthorizationMessageHandler(provider, naviManager);
-            //    handler.ConfigureHandler(authorizedUrls: new[] { builder.Configuration["WebApis:Books"] });
-            //    return handler;
-            //});
-
-
+                        return handler;
+                    }
+                );
 
             await builder.Build().RunAsync();
         }
     }
 }
+
+// options.ProviderOptions.ResponseType = "code"; // "token id_token"; | "code";
+
+//builder.Services.AddTransient<AuthorizationMessageHandler>(sp =>
+//{
+//    var provider = sp.GetRequiredService<IAccessTokenProvider>();
+//    var naviManager = sp.GetRequiredService<NavigationManager>();
+
+//    // 👇 Create a new "AuthorizationMessageHandler" instance,
+//    //    and return it after configuring it.
+//    var handler = new AuthorizationMessageHandler(provider, naviManager);
+//    handler.ConfigureHandler(authorizedUrls: new[] { builder.Configuration["WebApis:Books"] });
+//    return handler;
+//});
+
+
+
+//builder.Services.AddTransient<AuthorizationMessageHandler>(sp =>
+//{
+//    var provider = sp.GetRequiredService<IAccessTokenProvider>();
+//    var naviManager = sp.GetRequiredService<NavigationManager>();
+
+//    // 👇 Create a new "AuthorizationMessageHandler" instance,
+//    //    and return it after configuring it.
+//    var handler = new AuthorizationMessageHandler(provider, naviManager);
+//    handler.ConfigureHandler(authorizedUrls: new[] { builder.Configuration["WebApis:Books"] });
+//    return handler;
+//});
+
