@@ -386,3 +386,8 @@ Projects/fullstack-azure/source/Books.Web/wwwroot/images/books/Book3.jpg
 Projects/fullstack-azure/source/Books.Web/wwwroot/images/books/Book2.jpg
 Projects/fullstack-azure/source/Books.Web/wwwroot/images/books/Book10.jpg
 Projects/fullstack-azure/source/Books.Web/wwwroot/images/books/Book1.jpg
+Projects/booksstore-api/src/config/.env
+Projects/booksstore-api/src/config/.env.local
+Projects/booksstore-api/src/config/.env.development.local
+Projects/booksstore-api/src/config/.env.test.local
+Projects/booksstore-api/src/config/.env.production.local
