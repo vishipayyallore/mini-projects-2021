@@ -1,6 +1,6 @@
 <div class="card shadow mt-2 mb-2">
     <div class="card-header py-1">
-        <h4 class="PageTitle">Books List</h4>
+        <h1 class="PageTitle">Books List</h1>
     </div>
     <div class="container py-2" *ngIf="!booksList">
         <h4 class="spinner">Loading Books List ...</h4>
@@ -10,7 +10,7 @@
     </div>
     <div class="card-body" *ngIf="booksList">
         <div>
-            <a [routerLink]="['/add-book']" class="float">
+            <a [routerLink]="['/add-book']" class="float float-right">
                 <i class="fa fa-plus float-margintop"></i>
             </a>
         </div>

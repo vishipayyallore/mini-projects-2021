@@ -10,6 +10,9 @@ import { DashboardComponent } from './components/home/dashboard/dashboard.compon
 import { AboutusComponent } from './components/home/aboutus/aboutus.component';
 import { ContactusComponent } from './components/home/contactus/contactus.component';
 import { ListBooksComponent } from './components/books/list-books/list-books.component';
+import { AddBookComponent } from './components/books/add-book/add-book.component';
+import { EditBookComponent } from './components/books/edit-book/edit-book.component';
+import { DeleteBookComponent } from './components/books/delete-book/delete-book.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ListBooksComponent } from './components/books/list-books/list-books.com
     DashboardComponent,
     AboutusComponent,
     ContactusComponent,
-    ListBooksComponent
+    ListBooksComponent,
+    AddBookComponent,
+    EditBookComponent,
+    DeleteBookComponent
   ],
   imports: [
     BrowserModule,

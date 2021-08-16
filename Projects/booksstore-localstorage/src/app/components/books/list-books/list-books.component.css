@@ -1,3 +1,7 @@
+h1 {
+  color: navy;
+  font-weight: 600;
+}
 table{
     color: navy;
   }
@@ -17,9 +21,9 @@ table{
     position: fixed;
     width: 60px;
     height: 60px;
-    right: 40px;
-    top: 100px;
-    background-color: #2F5C8E;
+    right: 140px;
+    top: 58px;
+    background-color: #3f51b5;
     color: #fff;
     border-radius: 50px;
     text-align: center;
@@ -28,4 +32,8 @@ table{
 
   .float-margintop {
     margin-top: 22px;
+  }
+
+  a:hover{
+    color: cyan!important;
   }
