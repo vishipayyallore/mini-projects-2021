@@ -26,6 +26,13 @@ ng g c components/home/dashboard
 ng g c components/home/page-notfound
 ```
 
+```
+ng g module components/products --module=app --dry-run
+ng g module components/products/products-routing --flat --module=products --dry-run
+
+ng g c components/products/list-products
+```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 
 ## Development server

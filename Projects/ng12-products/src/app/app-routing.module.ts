@@ -6,6 +6,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule),
   },
+  {
+    path: 'products',
+    loadChildren: () => import('./components/products/products.module').then(m => m.ProductsModule),
+  },
   { path: '', redirectTo: 'home/dashboard', pathMatch: 'full' },
   { path: '**', redirectTo: 'home/pagenotfound', pathMatch: 'full' }
 ];
