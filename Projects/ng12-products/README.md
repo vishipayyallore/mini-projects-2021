@@ -1,5 +1,31 @@
 # Ng12Products
 
+
+```
+ng new ng12-products --prefix sv
+
+npm i bootstrap font-awesome guid-typescript
+```
+
+```
+ng g module components/shared --module=app --dry-run
+
+ng g c components/shared/top-navbar --dry-run
+ng g c components/shared/footer --dry-run
+ng g c components/shared/notifications-button --dry-run
+```
+
+
+```
+ng g module components/home --module=app --dry-run
+ng g module components/home/home-routing --flat --module=home --dry-run
+
+ng g c components/home/aboutus
+ng g c components/home/contactus
+ng g c components/home/dashboard
+ng g c components/home/page-notfound
+```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 
 ## Development server
