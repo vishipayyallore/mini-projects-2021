@@ -391,3 +391,9 @@ Projects/booksstore-api/src/config/.env.local
 Projects/booksstore-api/src/config/.env.development.local
 Projects/booksstore-api/src/config/.env.test.local
 Projects/booksstore-api/src/config/.env.production.local
+Projects/ng12-products/src/assets/images/products/garden_cart.png
+Projects/ng12-products/src/assets/images/products/hammer.png
+Projects/ng12-products/src/assets/images/products/leaf_rake.png
+Projects/ng12-products/src/assets/images/products/logo.jpg
+Projects/ng12-products/src/assets/images/products/saw.png
+Projects/ng12-products/src/assets/images/products/xbox-controller.png
