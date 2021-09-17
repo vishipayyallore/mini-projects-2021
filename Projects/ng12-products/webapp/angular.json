@@ -78,7 +78,8 @@
               "browserTarget": "ng12-products:build:production"
             },
             "development": {
-              "browserTarget": "ng12-products:build:development"
+              "browserTarget": "ng12-products:build:development",
+              "port": 4007
             }
           },
           "defaultConfiguration": "development"
