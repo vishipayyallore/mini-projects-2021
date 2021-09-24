@@ -33,6 +33,14 @@ ng g module components/products/products-routing --flat --module=products --dry-
 ng g c components/products/list-products
 ```
 
+
+```
+ng g module core/components/core-components --module=app --flat --dry-run   
+
+ng g c core/components/alerts/error-alert --dry-run
+
+ng g c core/components/loader --dry-run
+```
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 
 ## Development server
